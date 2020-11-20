@@ -16,7 +16,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Tests;
+namespace Elasticsearch6\Tests;
 
 class Utility
 {

@@ -1,16 +1,16 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Namespaces;
+namespace Elasticsearch6\Namespaces;
 
-use Elasticsearch7\Namespaces\AbstractNamespace;
+use Elasticsearch6\Namespaces\AbstractNamespace;
 
 /**
  * Class IngestNamespace
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch7\Namespaces
+ * @package  Elasticsearch6\Namespaces
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

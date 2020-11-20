@@ -15,7 +15,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Util;
+namespace Elasticsearch6\Util;
 
 use Exception;
 use JsonException;
@@ -247,7 +247,7 @@ class Endpoint
                         $this->name,
                         str_replace(':part', $part, $skeleton)
                     );
-                    $this->addNamespace('Elasticsearch7\Common\Exceptions\RuntimeException');
+                    $this->addNamespace('Elasticsearch6\Common\Exceptions\RuntimeException');
                 } else {
                     $params .= sprintf("%s\$%s = \$this->%s ?? null;\n", $tab8, $part, $part);
                 }
@@ -309,7 +309,7 @@ class Endpoint
                 $tab8,
                 $this->apiName
             );
-            $this->addNamespace('Elasticsearch7\Common\Exceptions\RuntimeException');
+            $this->addNamespace('Elasticsearch6\Common\Exceptions\RuntimeException');
         }
         return $checkPart . $params . $deprecated . $urls . $else;
     }
@@ -390,7 +390,7 @@ class Endpoint
     private function getSetBulkBody(): string
     {
         $setPart = file_get_contents(self::SET_BULK_BODY_TEMPLATE);
-        $this->addNamespace('Elasticsearch7\Common\Exceptions\InvalidArgumentException');
+        $this->addNamespace('Elasticsearch6\Common\Exceptions\InvalidArgumentException');
 
         return str_replace(':endpoint', $this->getClassName(), $setPart);
     }

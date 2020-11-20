@@ -3912,7 +3912,7 @@
     "digest": "406b27ffe91927d52e03fd104b58c6d1",
     "lang": "console-result",
     "found": [],
-    "source": "{\n  \"took\": 150,\n  \"timed_out\": false,\n  \"_shards\": {\n    \"total\": 1,\n    \"successful\": 1,\n    \"failed\": 0,\n    \"skipped\": 0\n  },\n  \"_clusters\": {\n    \"total\": 1,\n    \"successful\": 1,\n    \"skipped\": 0\n  },\n  \"hits\": {\n    \"total\" : {\n        \"value\": 1,\n        \"relation\": \"eq\"\n    },\n    \"max_score\": 1,\n    \"hits\": [\n      {\n        \"_index\": \"cluster_one:twitter\", <1>\n        \"_id\": \"0\",\n        \"_score\": 1,\n        \"_source\": {\n          \"user\": \"kimchy\",\n          \"date\": \"2009-11-15T14:12:12\",\n          \"message\": \"trying out Elasticsearch7\",\n          \"likes\": 0\n        }\n      }\n    ]\n  }\n}"
+    "source": "{\n  \"took\": 150,\n  \"timed_out\": false,\n  \"_shards\": {\n    \"total\": 1,\n    \"successful\": 1,\n    \"failed\": 0,\n    \"skipped\": 0\n  },\n  \"_clusters\": {\n    \"total\": 1,\n    \"successful\": 1,\n    \"skipped\": 0\n  },\n  \"hits\": {\n    \"total\" : {\n        \"value\": 1,\n        \"relation\": \"eq\"\n    },\n    \"max_score\": 1,\n    \"hits\": [\n      {\n        \"_index\": \"cluster_one:twitter\", <1>\n        \"_id\": \"0\",\n        \"_score\": 1,\n        \"_source\": {\n          \"user\": \"kimchy\",\n          \"date\": \"2009-11-15T14:12:12\",\n          \"message\": \"trying out Elasticsearch6\",\n          \"likes\": 0\n        }\n      }\n    ]\n  }\n}"
   },
   {
     "source_location": {
@@ -3950,7 +3950,7 @@
     "digest": "995347a8d6d131a9c0a664a357afcf1f",
     "lang": "console-result",
     "found": [],
-    "source": "{\n  \"took\": 150,\n  \"timed_out\": false,\n  \"num_reduce_phases\": 4,\n  \"_shards\": {\n    \"total\": 3,\n    \"successful\": 3,\n    \"failed\": 0,\n    \"skipped\": 0\n  },\n  \"_clusters\": {\n    \"total\": 3,\n    \"successful\": 3,\n    \"skipped\": 0\n  },\n  \"hits\": {\n    \"total\" : {\n        \"value\": 3,\n        \"relation\": \"eq\"\n    },\n    \"max_score\": 1,\n    \"hits\": [\n      {\n        \"_index\": \"twitter\", <1>\n        \"_id\": \"0\",\n        \"_score\": 2,\n        \"_source\": {\n          \"user\": \"kimchy\",\n          \"date\": \"2009-11-15T14:12:12\",\n          \"message\": \"trying out Elasticsearch7\",\n          \"likes\": 0\n        }\n      },\n      {\n        \"_index\": \"cluster_one:twitter\", <2>\n        \"_id\": \"0\",\n        \"_score\": 1,\n        \"_source\": {\n          \"user\": \"kimchy\",\n          \"date\": \"2009-11-15T14:12:12\",\n          \"message\": \"trying out Elasticsearch7\",\n          \"likes\": 0\n        }\n      },\n      {\n        \"_index\": \"cluster_two:twitter\", <3>\n        \"_id\": \"0\",\n        \"_score\": 1,\n        \"_source\": {\n          \"user\": \"kimchy\",\n          \"date\": \"2009-11-15T14:12:12\",\n          \"message\": \"trying out Elasticsearch7\",\n          \"likes\": 0\n        }\n      }\n    ]\n  }\n}"
+    "source": "{\n  \"took\": 150,\n  \"timed_out\": false,\n  \"num_reduce_phases\": 4,\n  \"_shards\": {\n    \"total\": 3,\n    \"successful\": 3,\n    \"failed\": 0,\n    \"skipped\": 0\n  },\n  \"_clusters\": {\n    \"total\": 3,\n    \"successful\": 3,\n    \"skipped\": 0\n  },\n  \"hits\": {\n    \"total\" : {\n        \"value\": 3,\n        \"relation\": \"eq\"\n    },\n    \"max_score\": 1,\n    \"hits\": [\n      {\n        \"_index\": \"twitter\", <1>\n        \"_id\": \"0\",\n        \"_score\": 2,\n        \"_source\": {\n          \"user\": \"kimchy\",\n          \"date\": \"2009-11-15T14:12:12\",\n          \"message\": \"trying out Elasticsearch6\",\n          \"likes\": 0\n        }\n      },\n      {\n        \"_index\": \"cluster_one:twitter\", <2>\n        \"_id\": \"0\",\n        \"_score\": 1,\n        \"_source\": {\n          \"user\": \"kimchy\",\n          \"date\": \"2009-11-15T14:12:12\",\n          \"message\": \"trying out Elasticsearch6\",\n          \"likes\": 0\n        }\n      },\n      {\n        \"_index\": \"cluster_two:twitter\", <3>\n        \"_id\": \"0\",\n        \"_score\": 1,\n        \"_source\": {\n          \"user\": \"kimchy\",\n          \"date\": \"2009-11-15T14:12:12\",\n          \"message\": \"trying out Elasticsearch6\",\n          \"likes\": 0\n        }\n      }\n    ]\n  }\n}"
   },
   {
     "source_location": {
@@ -3991,7 +3991,7 @@
       "go",
       "js"
     ],
-    "source": "GET /_search\n{\n  \"query\": { <1>\n    \"bool\": { <2>\n      \"must\": [\n        { \"match\": { \"title\":   \"Search\"        }},\n        { \"match\": { \"content\": \"Elasticsearch7\" }}\n      ],\n      \"filter\": [ <3>\n        { \"term\":  { \"status\": \"published\" }},\n        { \"range\": { \"publish_date\": { \"gte\": \"2015-01-01\" }}}\n      ]\n    }\n  }\n}",
+    "source": "GET /_search\n{\n  \"query\": { <1>\n    \"bool\": { <2>\n      \"must\": [\n        { \"match\": { \"title\":   \"Search\"        }},\n        { \"match\": { \"content\": \"Elasticsearch6\" }}\n      ],\n      \"filter\": [ <3>\n        { \"term\":  { \"status\": \"published\" }},\n        { \"range\": { \"publish_date\": { \"gte\": \"2015-01-01\" }}}\n      ]\n    }\n  }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -4049,7 +4049,7 @@
       "go",
       "js"
     ],
-    "source": "POST _search\n{\n  \"query\": {\n    \"bool\" : {\n      \"must\" : {\n        \"term\" : { \"user\" : \"kimchy\" }\n      },\n      \"filter\": {\n        \"term\" : { \"tag\" : \"tech\" }\n      },\n      \"must_not\" : {\n        \"range\" : {\n          \"age\" : { \"gte\" : 10, \"lte\" : 20 }\n        }\n      },\n      \"should\" : [\n        { \"term\" : { \"tag\" : \"wow\" } },\n        { \"term\" : { \"tag\" : \"Elasticsearch7\" } }\n      ],\n      \"minimum_should_match\" : 1,\n      \"boost\" : 1.0\n    }\n  }\n}",
+    "source": "POST _search\n{\n  \"query\": {\n    \"bool\" : {\n      \"must\" : {\n        \"term\" : { \"user\" : \"kimchy\" }\n      },\n      \"filter\": {\n        \"term\" : { \"tag\" : \"tech\" }\n      },\n      \"must_not\" : {\n        \"range\" : {\n          \"age\" : { \"gte\" : 10, \"lte\" : 20 }\n        }\n      },\n      \"should\" : [\n        { \"term\" : { \"tag\" : \"wow\" } },\n        { \"term\" : { \"tag\" : \"Elasticsearch6\" } }\n      ],\n      \"minimum_should_match\" : 1,\n      \"boost\" : 1.0\n    }\n  }\n}",
     "parsed_source": [
       {
         "method": "POST",
@@ -4426,7 +4426,7 @@
       "go",
       "js"
     ],
-    "source": "GET /_search\n{\n    \"query\": {\n        \"function_score\": {\n            \"query\": {\n                \"match\": { \"message\": \"Elasticsearch7\" }\n            },\n            \"script_score\" : {\n                \"script\" : {\n                  \"source\": \"Math.log(2 + doc['likes'].value)\"\n                }\n            }\n        }\n    }\n}",
+    "source": "GET /_search\n{\n    \"query\": {\n        \"function_score\": {\n            \"query\": {\n                \"match\": { \"message\": \"Elasticsearch6\" }\n            },\n            \"script_score\" : {\n                \"script\" : {\n                  \"source\": \"Math.log(2 + doc['likes'].value)\"\n                }\n            }\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -4467,7 +4467,7 @@
       "go",
       "js"
     ],
-    "source": "GET /_search\n{\n    \"query\": {\n        \"function_score\": {\n            \"query\": {\n                \"match\": { \"message\": \"Elasticsearch7\" }\n            },\n            \"script_score\" : {\n                \"script\" : {\n                    \"params\": {\n                        \"a\": 5,\n                        \"b\": 1.2\n                    },\n                    \"source\": \"params.a / Math.pow(params.b, doc['likes'].value)\"\n                }\n            }\n        }\n    }\n}",
+    "source": "GET /_search\n{\n    \"query\": {\n        \"function_score\": {\n            \"query\": {\n                \"match\": { \"message\": \"Elasticsearch6\" }\n            },\n            \"script_score\" : {\n                \"script\" : {\n                    \"params\": {\n                        \"a\": 5,\n                        \"b\": 1.2\n                    },\n                    \"source\": \"params.a / Math.pow(params.b, doc['likes'].value)\"\n                }\n            }\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -8378,7 +8378,7 @@
     "digest": "e539bfb5c73771c73acdf22fe77dde04",
     "lang": "console",
     "found": [],
-    "source": "GET /my-index/_search\n{\n    \"query\": {\n        \"has_parent\" : {\n            \"parent_type\" : \"parent\",\n            \"query\" : {\n                \"term\" : {\n                    \"tag\" : {\n                        \"value\" : \"Elasticsearch7\"\n                    }\n                }\n            }\n        }\n    }\n}",
+    "source": "GET /my-index/_search\n{\n    \"query\": {\n        \"has_parent\" : {\n            \"parent_type\" : \"parent\",\n            \"query\" : {\n                \"term\" : {\n                    \"tag\" : {\n                        \"value\" : \"Elasticsearch6\"\n                    }\n                }\n            }\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -10339,7 +10339,7 @@
     "digest": "eb35bef392e0957d609f1a26481e048d",
     "lang": "console",
     "found": [],
-    "source": "GET /_search\n{\n    \"query\" : {\n        \"script_score\" : {\n            \"query\" : {\n                \"match\": { \"message\": \"Elasticsearch7\" }\n            },\n            \"script\" : {\n                \"source\" : \"doc['likes'].value / 10 \"\n            }\n        }\n     }\n}",
+    "source": "GET /_search\n{\n    \"query\" : {\n        \"script_score\" : {\n            \"query\" : {\n                \"match\": { \"message\": \"Elasticsearch6\" }\n            },\n            \"script\" : {\n                \"source\" : \"doc['likes'].value / 10 \"\n            }\n        }\n     }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -10636,7 +10636,7 @@
     "digest": "e5240a59149072e8bc7532603fa813bd",
     "lang": "console",
     "found": [],
-    "source": "GET /twitter/_explain/0\n{\n    \"query\" : {\n        \"script_score\" : {\n            \"query\" : {\n                \"match\": { \"message\": \"Elasticsearch7\" }\n            },\n            \"script\" : {\n                \"source\" : \"\"\"\n                  long likes = doc['likes'].value;\n                  double normalizedLikes = likes / 10;\n                  if (explanation != null) {\n                    explanation.set('normalized likes = likes / 10 = ' + likes + ' / 10 = ' + normalizedLikes);\n                  }\n                  return normalizedLikes;\n                \"\"\"\n            }\n        }\n     }\n}",
+    "source": "GET /twitter/_explain/0\n{\n    \"query\" : {\n        \"script_score\" : {\n            \"query\" : {\n                \"match\": { \"message\": \"Elasticsearch6\" }\n            },\n            \"script\" : {\n                \"source\" : \"\"\"\n                  long likes = doc['likes'].value;\n                  double normalizedLikes = likes / 10;\n                  if (explanation != null) {\n                    explanation.set('normalized likes = likes / 10 = ' + likes + ' / 10 = ' + normalizedLikes);\n                  }\n                  return normalizedLikes;\n                \"\"\"\n            }\n        }\n     }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -11284,7 +11284,7 @@
       "go",
       "js"
     ],
-    "source": "GET /_search\n{\n    \"query\" : {\n        \"terms\" : {\n            \"user\" : [\"kimchy\", \"Elasticsearch7\"],\n            \"boost\" : 1.0\n        }\n    }\n}",
+    "source": "GET /_search\n{\n    \"query\" : {\n        \"terms\" : {\n            \"user\" : [\"kimchy\", \"Elasticsearch6\"],\n            \"boost\" : 1.0\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -19919,7 +19919,7 @@
     "digest": "3344c3478f1e8bbbef683757638a34f4",
     "lang": "console",
     "found": [],
-    "source": "POST /stackoverflow/_search?size=0\n{\n    \"query\": {\n        \"query_string\": {\n            \"query\": \"tags:Elasticsearch7\"\n        }\n    },\n    \"aggs\": {\n        \"my_unbiased_sample\": {\n            \"diversified_sampler\": {\n                \"shard_size\": 200,\n                \"field\" : \"author\"\n            },\n            \"aggs\": {\n                \"keywords\": {\n                    \"significant_terms\": {\n                        \"field\": \"tags\",\n                        \"exclude\": [\"Elasticsearch7\"]\n                    }\n                }\n            }\n        }\n    }\n}",
+    "source": "POST /stackoverflow/_search?size=0\n{\n    \"query\": {\n        \"query_string\": {\n            \"query\": \"tags:Elasticsearch6\"\n        }\n    },\n    \"aggs\": {\n        \"my_unbiased_sample\": {\n            \"diversified_sampler\": {\n                \"shard_size\": 200,\n                \"field\" : \"author\"\n            },\n            \"aggs\": {\n                \"keywords\": {\n                    \"significant_terms\": {\n                        \"field\": \"tags\",\n                        \"exclude\": [\"Elasticsearch6\"]\n                    }\n                }\n            }\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "POST",
@@ -20029,7 +20029,7 @@
     "digest": "c7ebd0dfce616a0f566d57b6a5f88f7c",
     "lang": "console-result",
     "found": [],
-    "source": "{\n    ...\n    \"aggregations\": {\n        \"my_unbiased_sample\": {\n            \"doc_count\": 6,\n            \"keywords\": {\n                \"doc_count\": 6,\n                \"bg_count\": 650,\n                \"buckets\": [\n                    {\n                        \"key\": \"logstash\",\n                        \"doc_count\": 3,\n                        \"score\": 2.213,\n                        \"bg_count\": 50\n                    },\n                    {\n                        \"key\": \"Elasticsearch7\",\n                        \"doc_count\": 3,\n                        \"score\": 1.34,\n                        \"bg_count\": 200\n                    }\n                ]\n            }\n        }\n    }\n}"
+    "source": "{\n    ...\n    \"aggregations\": {\n        \"my_unbiased_sample\": {\n            \"doc_count\": 6,\n            \"keywords\": {\n                \"doc_count\": 6,\n                \"bg_count\": 650,\n                \"buckets\": [\n                    {\n                        \"key\": \"logstash\",\n                        \"doc_count\": 3,\n                        \"score\": 2.213,\n                        \"bg_count\": 50\n                    },\n                    {\n                        \"key\": \"Elasticsearch6\",\n                        \"doc_count\": 3,\n                        \"score\": 1.34,\n                        \"bg_count\": 200\n                    }\n                ]\n            }\n        }\n    }\n}"
   },
   {
     "source_location": {
@@ -22778,7 +22778,7 @@
     "digest": "5e98c5f7432fff06316e0401f9333b5a",
     "lang": "console-result",
     "found": [],
-    "source": "{\n    ...\n    \"aggregations\": {\n        \"sample\": {\n            \"doc_count\": 200,<1>\n            \"keywords\": {\n                \"doc_count\": 200,\n                \"bg_count\": 650,\n                \"buckets\": [\n                    {\n                        \"key\": \"Elasticsearch7\",\n                        \"doc_count\": 150,\n                        \"score\": 1.078125,\n                        \"bg_count\": 200\n                    },\n                    {\n                        \"key\": \"logstash\",\n                        \"doc_count\": 50,\n                        \"score\": 0.5625,\n                        \"bg_count\": 50\n                    }\n                ]\n            }\n        }\n    }\n}"
+    "source": "{\n    ...\n    \"aggregations\": {\n        \"sample\": {\n            \"doc_count\": 200,<1>\n            \"keywords\": {\n                \"doc_count\": 200,\n                \"bg_count\": 650,\n                \"buckets\": [\n                    {\n                        \"key\": \"Elasticsearch6\",\n                        \"doc_count\": 150,\n                        \"score\": 1.078125,\n                        \"bg_count\": 200\n                    },\n                    {\n                        \"key\": \"logstash\",\n                        \"doc_count\": 50,\n                        \"score\": 0.5625,\n                        \"bg_count\": 50\n                    }\n                ]\n            }\n        }\n    }\n}"
   },
   {
     "source_location": {
@@ -23151,7 +23151,7 @@
     "digest": "805f5550b90e75aa5cc82b90d8c6c242",
     "lang": "console",
     "found": [],
-    "source": "GET news/_search\n{\n  \"query\": {\n    \"match\": {\n      \"content\": \"Elasticsearch7\"\n    }\n  },\n  \"aggs\": {\n    \"sample\": {\n      \"sampler\": {\n        \"shard_size\": 100\n      },\n      \"aggs\": {\n        \"keywords\": {\n          \"significant_text\": {\n            \"field\": \"content\",\n            \"filter_duplicate_text\": true\n          }\n        }\n      }\n    }\n  }\n}",
+    "source": "GET news/_search\n{\n  \"query\": {\n    \"match\": {\n      \"content\": \"Elasticsearch6\"\n    }\n  },\n  \"aggs\": {\n    \"sample\": {\n      \"sampler\": {\n        \"shard_size\": 100\n      },\n      \"aggs\": {\n        \"keywords\": {\n          \"significant_text\": {\n            \"field\": \"content\",\n            \"filter_duplicate_text\": true\n          }\n        }\n      }\n    }\n  }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -23234,7 +23234,7 @@
     "digest": "b3e6d6f7f6d65d1efb60ca7503a20b16",
     "lang": "console",
     "found": [],
-    "source": "GET news/_search\n{\n    \"query\" : {\n        \"match\" : {\n            \"custom_all\" : \"Elasticsearch7\"\n        }\n    },\n    \"aggs\" : {\n        \"tags\" : {\n            \"significant_text\" : {\n                \"field\" : \"custom_all\",\n                \"source_fields\": [\"content\" , \"title\"]\n            }\n        }\n    }\n}",
+    "source": "GET news/_search\n{\n    \"query\" : {\n        \"match\" : {\n            \"custom_all\" : \"Elasticsearch6\"\n        }\n    },\n    \"aggs\" : {\n        \"tags\" : {\n            \"significant_text\" : {\n                \"field\" : \"custom_all\",\n                \"source_fields\": [\"content\" , \"title\"]\n            }\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -26296,7 +26296,7 @@
     "digest": "609a1426592d38b830f5a2fbf7b24641",
     "lang": "console-result",
     "found": [],
-    "source": "{\n    \"aggregations\": {\n        \"date_histogram#tweets_over_time\": { <1>\n            \"buckets\" : [\n                {\n                    \"key_as_string\" : \"2009-01-01T00:00:00.000Z\",\n                    \"key\" : 1230768000000,\n                    \"doc_count\" : 5,\n                    \"top_hits#top_users\" : {  <2>\n                        \"hits\" : {\n                            \"total\" : {\n                                \"value\": 5,\n                                \"relation\": \"eq\"\n                            },\n                            \"max_score\" : 1.0,\n                            \"hits\" : [\n                                {\n                                  \"_index\": \"twitter\",\n                                  \"_id\": \"0\",\n                                  \"_score\": 1.0,\n                                  \"_source\": {\n                                    \"date\": \"2009-11-15T14:12:12\",\n                                    \"message\": \"trying out Elasticsearch7\",\n                                    \"user\": \"kimchy\",\n                                    \"likes\": 0\n                                  }\n                                }\n                            ]\n                        }\n                    }\n                }\n            ]\n        }\n    },\n    ...\n}"
+    "source": "{\n    \"aggregations\": {\n        \"date_histogram#tweets_over_time\": { <1>\n            \"buckets\" : [\n                {\n                    \"key_as_string\" : \"2009-01-01T00:00:00.000Z\",\n                    \"key\" : 1230768000000,\n                    \"doc_count\" : 5,\n                    \"top_hits#top_users\" : {  <2>\n                        \"hits\" : {\n                            \"total\" : {\n                                \"value\": 5,\n                                \"relation\": \"eq\"\n                            },\n                            \"max_score\" : 1.0,\n                            \"hits\" : [\n                                {\n                                  \"_index\": \"twitter\",\n                                  \"_id\": \"0\",\n                                  \"_score\": 1.0,\n                                  \"_source\": {\n                                    \"date\": \"2009-11-15T14:12:12\",\n                                    \"message\": \"trying out Elasticsearch6\",\n                                    \"user\": \"kimchy\",\n                                    \"likes\": 0\n                                  }\n                                }\n                            ]\n                        }\n                    }\n                }\n            ]\n        }\n    },\n    ...\n}"
   },
   {
     "source_location": {
@@ -27057,7 +27057,7 @@
       "go",
       "js"
     ],
-    "source": "PUT my_index/_doc/1\n{\n  \"message\": \"some arrays in this document...\",\n  \"tags\":  [ \"Elasticsearch7\", \"wow\" ], <1>\n  \"lists\": [ <2>\n    {\n      \"name\": \"prog_list\",\n      \"description\": \"programming list\"\n    },\n    {\n      \"name\": \"cool_list\",\n      \"description\": \"cool stuff list\"\n    }\n  ]\n}\n\nPUT my_index/_doc/2 <3>\n{\n  \"message\": \"no arrays in this document...\",\n  \"tags\":  \"Elasticsearch7\",\n  \"lists\": {\n    \"name\": \"prog_list\",\n    \"description\": \"programming list\"\n  }\n}\n\nGET my_index/_search\n{\n  \"query\": {\n    \"match\": {\n      \"tags\": \"Elasticsearch7\" <4>\n    }\n  }\n}",
+    "source": "PUT my_index/_doc/1\n{\n  \"message\": \"some arrays in this document...\",\n  \"tags\":  [ \"Elasticsearch6\", \"wow\" ], <1>\n  \"lists\": [ <2>\n    {\n      \"name\": \"prog_list\",\n      \"description\": \"programming list\"\n    },\n    {\n      \"name\": \"cool_list\",\n      \"description\": \"cool stuff list\"\n    }\n  ]\n}\n\nPUT my_index/_doc/2 <3>\n{\n  \"message\": \"no arrays in this document...\",\n  \"tags\":  \"Elasticsearch6\",\n  \"lists\": {\n    \"name\": \"prog_list\",\n    \"description\": \"programming list\"\n  }\n}\n\nGET my_index/_search\n{\n  \"query\": {\n    \"match\": {\n      \"tags\": \"Elasticsearch6\" <4>\n    }\n  }\n}",
     "parsed_source": [
       {
         "method": "PUT",
@@ -31875,7 +31875,7 @@
     "digest": "134384b8c63cfbd8d762fb01757bb3f9",
     "lang": "console",
     "found": [],
-    "source": "POST logs-debug/_doc\n{\n  \"date\": \"2019-12-12\",\n  \"message\": \"Starting up Elasticsearch7\",\n  \"level\": \"debug\"\n}\n\nPOST logs-debug/_doc\n{\n  \"date\": \"2019-12-12\",\n  \"message\": \"Starting up Elasticsearch7\"\n}",
+    "source": "POST logs-debug/_doc\n{\n  \"date\": \"2019-12-12\",\n  \"message\": \"Starting up Elasticsearch6\",\n  \"level\": \"debug\"\n}\n\nPOST logs-debug/_doc\n{\n  \"date\": \"2019-12-12\",\n  \"message\": \"Starting up Elasticsearch6\"\n}",
     "parsed_source": [
       {
         "method": "POST",
@@ -54676,7 +54676,7 @@
     "digest": "a0f15dd7fcb07bc8543fe04c2907d4b9",
     "lang": "console",
     "found": [],
-    "source": "GET index/_search\n{\n    \"query\" : {\n        \"script_score\" : {\n            \"query\" : {\n                \"match\": { \"body\": \"Elasticsearch7\" }\n            },\n            \"script\" : {\n                \"source\" : \"_score * saturation(doc['pagerank'].value, 10)\" <1>\n            }\n        }\n    }\n}",
+    "source": "GET index/_search\n{\n    \"query\" : {\n        \"script_score\" : {\n            \"query\" : {\n                \"match\": { \"body\": \"Elasticsearch6\" }\n            },\n            \"script\" : {\n                \"source\" : \"_score * saturation(doc['pagerank'].value, 10)\" <1>\n            }\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -54711,7 +54711,7 @@
     "digest": "0dfa66a019712e413652c5eddd057ba8",
     "lang": "console",
     "found": [],
-    "source": "GET _search\n{\n    \"query\" : {\n        \"bool\" : {\n            \"must\": {\n                \"match\": { \"body\": \"Elasticsearch7\" }\n            },\n            \"should\": {\n                \"rank_feature\": {\n                    \"field\": \"pagerank\", <1>\n                    \"saturation\": {\n                        \"pivot\": 10\n                    }\n                }\n            }\n        }\n    }\n}",
+    "source": "GET _search\n{\n    \"query\" : {\n        \"bool\" : {\n            \"must\": {\n                \"match\": { \"body\": \"Elasticsearch6\" }\n            },\n            \"should\": {\n                \"rank_feature\": {\n                    \"field\": \"pagerank\", <1>\n                    \"saturation\": {\n                        \"pivot\": 10\n                    }\n                }\n            }\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -58109,7 +58109,7 @@
     "digest": "482734cbb2bea52b69e21cc779b00dcd",
     "lang": "console-result",
     "found": [],
-    "source": "{\n  \"_nodes\": ...\n  \"cluster_name\": \"Elasticsearch7\",\n  \"nodes\": {\n    \"USpTGYaBSIKbgSUJR2Z9lg\": {\n      \"name\": \"node-0\",\n      \"transport_address\": \"192.168.17:9300\",\n      \"host\": \"node-0.elastic.co\",\n      \"ip\": \"192.168.17\",\n      \"version\": \"{version}\",\n      \"build_flavor\": \"{build_flavor}\",\n      \"build_type\": \"{build_type}\",\n      \"build_hash\": \"587409e\",\n      \"roles\": [\n        \"master\",\n        \"data\",\n        \"ingest\"\n      ],\n      \"attributes\": {},\n      \"plugins\": [\n        {\n          \"name\": \"analysis-icu\",\n          \"version\": \"{version}\",\n          \"description\": \"The ICU Analysis plugin integrates Lucene ICU module into elasticsearch, adding ICU relates analysis components.\",\n          \"classname\": \"org.elasticsearch.plugin.analysis.icu.AnalysisICUPlugin\",\n          \"has_native_controller\": false\n        }\n      ],\n      \"modules\": [\n        {\n          \"name\": \"lang-painless\",\n          \"version\": \"{version}\",\n          \"description\": \"An easy, safe and fast scripting language for Elasticsearch7\",\n          \"classname\": \"org.elasticsearch.painless.PainlessPlugin\",\n          \"has_native_controller\": false\n        }\n      ]\n    }\n  }\n}"
+    "source": "{\n  \"_nodes\": ...\n  \"cluster_name\": \"Elasticsearch6\",\n  \"nodes\": {\n    \"USpTGYaBSIKbgSUJR2Z9lg\": {\n      \"name\": \"node-0\",\n      \"transport_address\": \"192.168.17:9300\",\n      \"host\": \"node-0.elastic.co\",\n      \"ip\": \"192.168.17\",\n      \"version\": \"{version}\",\n      \"build_flavor\": \"{build_flavor}\",\n      \"build_type\": \"{build_type}\",\n      \"build_hash\": \"587409e\",\n      \"roles\": [\n        \"master\",\n        \"data\",\n        \"ingest\"\n      ],\n      \"attributes\": {},\n      \"plugins\": [\n        {\n          \"name\": \"analysis-icu\",\n          \"version\": \"{version}\",\n          \"description\": \"The ICU Analysis plugin integrates Lucene ICU module into elasticsearch, adding ICU relates analysis components.\",\n          \"classname\": \"org.elasticsearch.plugin.analysis.icu.AnalysisICUPlugin\",\n          \"has_native_controller\": false\n        }\n      ],\n      \"modules\": [\n        {\n          \"name\": \"lang-painless\",\n          \"version\": \"{version}\",\n          \"description\": \"An easy, safe and fast scripting language for Elasticsearch6\",\n          \"classname\": \"org.elasticsearch.painless.PainlessPlugin\",\n          \"has_native_controller\": false\n        }\n      ]\n    }\n  }\n}"
   },
   {
     "source_location": {
@@ -58141,7 +58141,7 @@
     "digest": "e5909bdf16ebbcdb6e4e7da443ad367a",
     "lang": "console-result",
     "found": [],
-    "source": "{\n  \"_nodes\": ...\n  \"cluster_name\": \"Elasticsearch7\",\n  \"nodes\": {\n    \"USpTGYaBSIKbgSUJR2Z9lg\": {\n      \"name\": \"node-0\",\n      \"transport_address\": \"192.168.17:9300\",\n      \"host\": \"node-0.elastic.co\",\n      \"ip\": \"192.168.17\",\n      \"version\": \"{version}\",\n      \"build_flavor\": \"{build_flavor}\",\n      \"build_type\": \"{build_type}\",\n      \"build_hash\": \"587409e\",\n      \"roles\": [],\n      \"attributes\": {},\n      \"ingest\": {\n        \"processors\": [\n          {\n            \"type\": \"date\"\n          },\n          {\n            \"type\": \"uppercase\"\n          },\n          {\n            \"type\": \"set\"\n          },\n          {\n            \"type\": \"lowercase\"\n          },\n          {\n            \"type\": \"gsub\"\n          },\n          {\n            \"type\": \"convert\"\n          },\n          {\n            \"type\": \"remove\"\n          },\n          {\n            \"type\": \"fail\"\n          },\n          {\n            \"type\": \"foreach\"\n          },\n          {\n            \"type\": \"split\"\n          },\n          {\n            \"type\": \"trim\"\n          },\n          {\n            \"type\": \"rename\"\n          },\n          {\n            \"type\": \"join\"\n          },\n          {\n            \"type\": \"append\"\n          }\n        ]\n      }\n    }\n  }\n}"
+    "source": "{\n  \"_nodes\": ...\n  \"cluster_name\": \"Elasticsearch6\",\n  \"nodes\": {\n    \"USpTGYaBSIKbgSUJR2Z9lg\": {\n      \"name\": \"node-0\",\n      \"transport_address\": \"192.168.17:9300\",\n      \"host\": \"node-0.elastic.co\",\n      \"ip\": \"192.168.17\",\n      \"version\": \"{version}\",\n      \"build_flavor\": \"{build_flavor}\",\n      \"build_type\": \"{build_type}\",\n      \"build_hash\": \"587409e\",\n      \"roles\": [],\n      \"attributes\": {},\n      \"ingest\": {\n        \"processors\": [\n          {\n            \"type\": \"date\"\n          },\n          {\n            \"type\": \"uppercase\"\n          },\n          {\n            \"type\": \"set\"\n          },\n          {\n            \"type\": \"lowercase\"\n          },\n          {\n            \"type\": \"gsub\"\n          },\n          {\n            \"type\": \"convert\"\n          },\n          {\n            \"type\": \"remove\"\n          },\n          {\n            \"type\": \"fail\"\n          },\n          {\n            \"type\": \"foreach\"\n          },\n          {\n            \"type\": \"split\"\n          },\n          {\n            \"type\": \"trim\"\n          },\n          {\n            \"type\": \"rename\"\n          },\n          {\n            \"type\": \"join\"\n          },\n          {\n            \"type\": \"append\"\n          }\n        ]\n      }\n    }\n  }\n}"
   },
   {
     "source_location": {
@@ -59523,7 +59523,7 @@
       "go",
       "js"
     ],
-    "source": "POST twitter/_doc/\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch7\"\n}",
+    "source": "POST twitter/_doc/\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch6\"\n}",
     "parsed_source": [
       {
         "method": "POST",
@@ -59566,7 +59566,7 @@
       "go",
       "js"
     ],
-    "source": "POST twitter/_doc?routing=kimchy\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch7\"\n}",
+    "source": "POST twitter/_doc?routing=kimchy\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch6\"\n}",
     "parsed_source": [
       {
         "method": "POST",
@@ -59601,7 +59601,7 @@
       "go",
       "js"
     ],
-    "source": "PUT twitter/_doc/1?timeout=5m\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch7\"\n}",
+    "source": "PUT twitter/_doc/1?timeout=5m\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch6\"\n}",
     "parsed_source": [
       {
         "method": "PUT",
@@ -59672,7 +59672,7 @@
       "go",
       "js"
     ],
-    "source": "PUT twitter/_doc/1\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch7\"\n}",
+    "source": "PUT twitter/_doc/1\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch6\"\n}",
     "parsed_source": [
       {
         "method": "PUT",
@@ -59716,7 +59716,7 @@
       "go",
       "js"
     ],
-    "source": "PUT twitter/_create/1\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch7\"\n}",
+    "source": "PUT twitter/_create/1\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch6\"\n}",
     "parsed_source": [
       {
         "method": "PUT",
@@ -59750,7 +59750,7 @@
       "go",
       "js"
     ],
-    "source": "PUT twitter/_doc/1?op_type=create\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch7\"\n}",
+    "source": "PUT twitter/_doc/1?op_type=create\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch6\"\n}",
     "parsed_source": [
       {
         "method": "PUT",
@@ -59962,7 +59962,7 @@
     "digest": "5f6e080e8c400de205ea04bd19d215a3",
     "lang": "console-result",
     "found": [],
-    "source": "{\n    \"_index\" : \"twitter\",\n    \"_id\" : \"0\",\n    \"_version\" : 1,\n    \"_seq_no\" : 10,\n    \"_primary_term\" : 1,\n    \"found\": true,\n    \"_source\" : {\n        \"user\" : \"kimchy\",\n        \"date\" : \"2009-11-15T14:12:12\",\n        \"likes\": 0,\n        \"message\" : \"trying out Elasticsearch7\"\n    }\n}"
+    "source": "{\n    \"_index\" : \"twitter\",\n    \"_id\" : \"0\",\n    \"_version\" : 1,\n    \"_seq_no\" : 10,\n    \"_primary_term\" : 1,\n    \"found\": true,\n    \"_source\" : {\n        \"user\" : \"kimchy\",\n        \"date\" : \"2009-11-15T14:12:12\",\n        \"likes\": 0,\n        \"message\" : \"trying out Elasticsearch6\"\n    }\n}"
   },
   {
     "source_location": {
@@ -72301,7 +72301,7 @@
     "digest": "a151a5db7e5b65046743be37fd9a02e9",
     "lang": "console-result",
     "found": [],
-    "source": "{\n  \"license\" : {\n    \"status\" : \"active\",\n    \"uid\" : \"cbff45e7-c553-41f7-ae4f-9205eabd80xx\",\n    \"type\" : \"trial\",\n    \"issue_date\" : \"2018-10-20T22:05:12.332Z\",\n    \"issue_date_in_millis\" : 1540073112332,\n    \"expiry_date\" : \"2018-11-19T22:05:12.332Z\",\n    \"expiry_date_in_millis\" : 1542665112332,\n    \"max_nodes\" : 1000,\n    \"max_resource_units\" : null,\n    \"issued_to\" : \"test\",\n    \"issuer\" : \"Elasticsearch7\",\n    \"start_date_in_millis\" : -1\n  }\n}"
+    "source": "{\n  \"license\" : {\n    \"status\" : \"active\",\n    \"uid\" : \"cbff45e7-c553-41f7-ae4f-9205eabd80xx\",\n    \"type\" : \"trial\",\n    \"issue_date\" : \"2018-10-20T22:05:12.332Z\",\n    \"issue_date_in_millis\" : 1540073112332,\n    \"expiry_date\" : \"2018-11-19T22:05:12.332Z\",\n    \"expiry_date_in_millis\" : 1542665112332,\n    \"max_nodes\" : 1000,\n    \"max_resource_units\" : null,\n    \"issued_to\" : \"test\",\n    \"issuer\" : \"Elasticsearch6\",\n    \"start_date_in_millis\" : -1\n  }\n}"
   },
   {
     "source_location": {
@@ -75728,7 +75728,7 @@
       "go",
       "js"
     ],
-    "source": "POST /twitter/_doc?routing=kimchy\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch7\"\n}",
+    "source": "POST /twitter/_doc?routing=kimchy\n{\n    \"user\" : \"kimchy\",\n    \"post_date\" : \"2009-11-15T14:12:12\",\n    \"message\" : \"trying out Elasticsearch6\"\n}",
     "parsed_source": [
       {
         "method": "POST",
@@ -75920,7 +75920,7 @@
     "digest": "350f67173e43125d038317fb7fc9b242",
     "lang": "console-result",
     "found": [],
-    "source": "{\n  \"took\": 5,\n  \"timed_out\": false,\n  \"_shards\": {\n    \"total\": 1,\n    \"successful\": 1,\n    \"skipped\": 0,\n    \"failed\": 0\n  },\n  \"hits\": {\n    \"total\": {\n      \"value\": 1,\n      \"relation\": \"eq\"\n    },\n    \"max_score\": 1.3862942,\n    \"hits\": [\n      {\n        \"_index\": \"twitter\",\n        \"_id\": \"0\",\n        \"_score\": 1.3862942,\n        \"_source\": {\n          \"date\": \"2009-11-15T14:12:12\",\n          \"likes\": 0,\n          \"message\": \"trying out Elasticsearch7\",\n          \"user\": \"kimchy\"\n        }\n      }\n    ]\n  }\n}"
+    "source": "{\n  \"took\": 5,\n  \"timed_out\": false,\n  \"_shards\": {\n    \"total\": 1,\n    \"successful\": 1,\n    \"skipped\": 0,\n    \"failed\": 0\n  },\n  \"hits\": {\n    \"total\": {\n      \"value\": 1,\n      \"relation\": \"eq\"\n    },\n    \"max_score\": 1.3862942,\n    \"hits\": [\n      {\n        \"_index\": \"twitter\",\n        \"_id\": \"0\",\n        \"_score\": 1.3862942,\n        \"_source\": {\n          \"date\": \"2009-11-15T14:12:12\",\n          \"likes\": 0,\n          \"message\": \"trying out Elasticsearch6\",\n          \"user\": \"kimchy\"\n        }\n      }\n    ]\n  }\n}"
   },
   {
     "source_location": {
@@ -76075,7 +76075,7 @@
     "digest": "359cac0b617a365d35277f510bd4c5ee",
     "lang": "console-result",
     "found": [],
-    "source": "{\n  \"took\": 1,\n  \"timed_out\": false,\n  \"_shards\": {\n    \"total\": 1,\n    \"successful\": 1,\n    \"skipped\": 0,\n    \"failed\": 0\n  },\n  \"hits\": {\n    \"total\": {\n      \"value\": 1,\n      \"relation\": \"eq\"\n    },\n    \"max_score\": 1.3862942,\n    \"hits\": [\n      {\n        \"_index\": \"twitter\",\n        \"_id\": \"0\",\n        \"_score\": 1.3862942,\n        \"_source\": {\n          \"user\": \"kimchy\",\n          \"message\": \"trying out Elasticsearch7\",\n          \"date\": \"2009-11-15T14:12:12\",\n          \"likes\": 0\n        }\n      }\n    ]\n  }\n}"
+    "source": "{\n  \"took\": 1,\n  \"timed_out\": false,\n  \"_shards\": {\n    \"total\": 1,\n    \"successful\": 1,\n    \"skipped\": 0,\n    \"failed\": 0\n  },\n  \"hits\": {\n    \"total\": {\n      \"value\": 1,\n      \"relation\": \"eq\"\n    },\n    \"max_score\": 1.3862942,\n    \"hits\": [\n      {\n        \"_index\": \"twitter\",\n        \"_id\": \"0\",\n        \"_score\": 1.3862942,\n        \"_source\": {\n          \"user\": \"kimchy\",\n          \"message\": \"trying out Elasticsearch6\",\n          \"date\": \"2009-11-15T14:12:12\",\n          \"likes\": 0\n        }\n      }\n    ]\n  }\n}"
   },
   {
     "source_location": {
@@ -76163,7 +76163,7 @@
     "found": [
       "csharp"
     ],
-    "source": "GET /twitter/_search\n{\n    \"query\": {\n        \"match\": {\n            \"message\": \"Elasticsearch7\"\n        }\n    },\n    \"collapse\" : {\n        \"field\" : \"user\" <1>\n    },\n    \"sort\": [\"likes\"], <2>\n    \"from\": 10 <3>\n}",
+    "source": "GET /twitter/_search\n{\n    \"query\": {\n        \"match\": {\n            \"message\": \"Elasticsearch6\"\n        }\n    },\n    \"collapse\" : {\n        \"field\" : \"user\" <1>\n    },\n    \"sort\": [\"likes\"], <2>\n    \"from\": 10 <3>\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -76200,7 +76200,7 @@
     "found": [
       "csharp"
     ],
-    "source": "GET /twitter/_search\n{\n    \"query\": {\n        \"match\": {\n            \"message\": \"Elasticsearch7\"\n        }\n    },\n    \"collapse\" : {\n        \"field\" : \"user\", <1>\n        \"inner_hits\": {\n            \"name\": \"last_tweets\", <2>\n            \"size\": 5, <3>\n            \"sort\": [{ \"date\": \"asc\" }] <4>\n        },\n        \"max_concurrent_group_searches\": 4 <5>\n    },\n    \"sort\": [\"likes\"]\n}",
+    "source": "GET /twitter/_search\n{\n    \"query\": {\n        \"match\": {\n            \"message\": \"Elasticsearch6\"\n        }\n    },\n    \"collapse\" : {\n        \"field\" : \"user\", <1>\n        \"inner_hits\": {\n            \"name\": \"last_tweets\", <2>\n            \"size\": 5, <3>\n            \"sort\": [{ \"date\": \"asc\" }] <4>\n        },\n        \"max_concurrent_group_searches\": 4 <5>\n    },\n    \"sort\": [\"likes\"]\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -76244,7 +76244,7 @@
     "digest": "4f20ca49fbaac83620d4cb23fd355f3b",
     "lang": "console",
     "found": [],
-    "source": "GET /twitter/_search\n{\n    \"query\": {\n        \"match\": {\n            \"message\": \"Elasticsearch7\"\n        }\n    },\n    \"collapse\" : {\n        \"field\" : \"user\", <1>\n        \"inner_hits\": [\n            {\n                \"name\": \"most_liked\",  <2>\n                \"size\": 3,\n                \"sort\": [\"likes\"]\n            },\n            {\n                \"name\": \"most_recent\", <3>\n                \"size\": 3,\n                \"sort\": [{ \"date\": \"asc\" }]\n            }\n        ]\n    },\n    \"sort\": [\"likes\"]\n}",
+    "source": "GET /twitter/_search\n{\n    \"query\": {\n        \"match\": {\n            \"message\": \"Elasticsearch6\"\n        }\n    },\n    \"collapse\" : {\n        \"field\" : \"user\", <1>\n        \"inner_hits\": [\n            {\n                \"name\": \"most_liked\",  <2>\n                \"size\": 3,\n                \"sort\": [\"likes\"]\n            },\n            {\n                \"name\": \"most_recent\", <3>\n                \"size\": 3,\n                \"sort\": [{ \"date\": \"asc\" }]\n            }\n        ]\n    },\n    \"sort\": [\"likes\"]\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -77864,7 +77864,7 @@
     "digest": "9405de6fd841c32ac510eb0a7eeed989",
     "lang": "console",
     "found": [],
-    "source": "GET /_search?preference=xyzabc123\n{\n    \"query\": {\n        \"match\": {\n            \"title\": \"Elasticsearch7\"\n        }\n    }\n}",
+    "source": "GET /_search?preference=xyzabc123\n{\n    \"query\": {\n        \"match\": {\n            \"title\": \"Elasticsearch6\"\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -78072,7 +78072,7 @@
       "go",
       "js"
     ],
-    "source": "POST /twitter/_search?scroll=1m\n{\n    \"size\": 100,\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch7\"\n        }\n    }\n}",
+    "source": "POST /twitter/_search?scroll=1m\n{\n    \"size\": 100,\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch6\"\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "POST",
@@ -78306,7 +78306,7 @@
       "go",
       "js"
     ],
-    "source": "GET /twitter/_search?scroll=1m\n{\n    \"slice\": {\n        \"id\": 0, <1>\n        \"max\": 2 <2>\n    },\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch7\"\n        }\n    }\n}\nGET /twitter/_search?scroll=1m\n{\n    \"slice\": {\n        \"id\": 1,\n        \"max\": 2\n    },\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch7\"\n        }\n    }\n}",
+    "source": "GET /twitter/_search?scroll=1m\n{\n    \"slice\": {\n        \"id\": 0, <1>\n        \"max\": 2 <2>\n    },\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch6\"\n        }\n    }\n}\nGET /twitter/_search?scroll=1m\n{\n    \"slice\": {\n        \"id\": 1,\n        \"max\": 2\n    },\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch6\"\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -78367,7 +78367,7 @@
       "go",
       "js"
     ],
-    "source": "GET /twitter/_search?scroll=1m\n{\n    \"slice\": {\n        \"field\": \"date\",\n        \"id\": 0,\n        \"max\": 10\n    },\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch7\"\n        }\n    }\n}",
+    "source": "GET /twitter/_search?scroll=1m\n{\n    \"slice\": {\n        \"field\": \"date\",\n        \"id\": 0,\n        \"max\": 10\n    },\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch6\"\n        }\n    }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -78402,7 +78402,7 @@
     "digest": "402ee4bf8e2e386d5f9100fdaf13a6d6",
     "lang": "console",
     "found": [],
-    "source": "GET twitter/_search\n{\n    \"size\": 10,\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch7\"\n        }\n    },\n    \"sort\": [\n        {\"date\": \"asc\"},\n        {\"tie_breaker_id\": \"asc\"}      <1>\n    ]\n}",
+    "source": "GET twitter/_search\n{\n    \"size\": 10,\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch6\"\n        }\n    },\n    \"sort\": [\n        {\"date\": \"asc\"},\n        {\"tie_breaker_id\": \"asc\"}      <1>\n    ]\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -78439,7 +78439,7 @@
     "digest": "525ec32997125d401f9c128ca450cefa",
     "lang": "console",
     "found": [],
-    "source": "GET twitter/_search\n{\n    \"size\": 10,\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch7\"\n        }\n    },\n    \"search_after\": [1463538857, \"654323\"],\n    \"sort\": [\n        {\"date\": \"asc\"},\n        {\"tie_breaker_id\": \"asc\"}\n    ]\n}",
+    "source": "GET twitter/_search\n{\n    \"size\": 10,\n    \"query\": {\n        \"match\" : {\n            \"title\" : \"Elasticsearch6\"\n        }\n    },\n    \"search_after\": [1463538857, \"654323\"],\n    \"sort\": [\n        {\"date\": \"asc\"},\n        {\"tie_breaker_id\": \"asc\"}\n    ]\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -79555,7 +79555,7 @@
     "found": [
       "csharp"
     ],
-    "source": "GET twitter/_search\n{\n    \"track_total_hits\": true,\n     \"query\": {\n        \"match\" : {\n            \"message\" : \"Elasticsearch7\"\n        }\n     }\n}",
+    "source": "GET twitter/_search\n{\n    \"track_total_hits\": true,\n     \"query\": {\n        \"match\" : {\n            \"message\" : \"Elasticsearch6\"\n        }\n     }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -79594,7 +79594,7 @@
     "digest": "e45cb729ed4a694b2d6cabaa55c9b5be",
     "lang": "console",
     "found": [],
-    "source": "GET twitter/_search\n{\n    \"track_total_hits\": 100,\n     \"query\": {\n        \"match\" : {\n            \"message\" : \"Elasticsearch7\"\n        }\n     }\n}",
+    "source": "GET twitter/_search\n{\n    \"track_total_hits\": 100,\n     \"query\": {\n        \"match\" : {\n            \"message\" : \"Elasticsearch6\"\n        }\n     }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -79645,7 +79645,7 @@
     "found": [
       "csharp"
     ],
-    "source": "GET twitter/_search\n{\n    \"track_total_hits\": false,\n     \"query\": {\n        \"match\" : {\n            \"message\" : \"Elasticsearch7\"\n        }\n     }\n}",
+    "source": "GET twitter/_search\n{\n    \"track_total_hits\": false,\n     \"query\": {\n        \"match\" : {\n            \"message\" : \"Elasticsearch6\"\n        }\n     }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -80345,7 +80345,7 @@
       "go",
       "js"
     ],
-    "source": "POST twitter/_search\n{\n  \"query\" : {\n    \"match\": {\n      \"message\": \"tring out Elasticsearch7\"\n    }\n  },\n  \"suggest\" : {\n    \"my-suggestion\" : {\n      \"text\" : \"tring out Elasticsearch7\",\n      \"term\" : {\n        \"field\" : \"message\"\n      }\n    }\n  }\n}",
+    "source": "POST twitter/_search\n{\n  \"query\" : {\n    \"match\": {\n      \"message\": \"tring out Elasticsearch6\"\n    }\n  },\n  \"suggest\" : {\n    \"my-suggestion\" : {\n      \"text\" : \"tring out Elasticsearch6\",\n      \"term\" : {\n        \"field\" : \"message\"\n      }\n    }\n  }\n}",
     "parsed_source": [
       {
         "method": "POST",
@@ -80386,7 +80386,7 @@
       "go",
       "js"
     ],
-    "source": "POST _search\n{\n  \"suggest\": {\n    \"my-suggest-1\" : {\n      \"text\" : \"tring out Elasticsearch7\",\n      \"term\" : {\n        \"field\" : \"message\"\n      }\n    },\n    \"my-suggest-2\" : {\n      \"text\" : \"kmichy\",\n      \"term\" : {\n        \"field\" : \"user\"\n      }\n    }\n  }\n}",
+    "source": "POST _search\n{\n  \"suggest\": {\n    \"my-suggest-1\" : {\n      \"text\" : \"tring out Elasticsearch6\",\n      \"term\" : {\n        \"field\" : \"message\"\n      }\n    },\n    \"my-suggest-2\" : {\n      \"text\" : \"kmichy\",\n      \"term\" : {\n        \"field\" : \"user\"\n      }\n    }\n  }\n}",
     "parsed_source": [
       {
         "method": "POST",
@@ -80421,7 +80421,7 @@
     "digest": "b53648eccf39f999e69495a1ef4b8a43",
     "lang": "console-result",
     "found": [],
-    "source": "{\n  \"_shards\": ...\n  \"hits\": ...\n  \"took\": 2,\n  \"timed_out\": false,\n  \"suggest\": {\n    \"my-suggest-1\": [ {\n      \"text\": \"tring\",\n      \"offset\": 0,\n      \"length\": 5,\n      \"options\": [ {\"text\": \"trying\", \"score\": 0.8, \"freq\": 1 } ]\n    }, {\n      \"text\": \"out\",\n      \"offset\": 6,\n      \"length\": 3,\n      \"options\": []\n    }, {\n      \"text\": \"Elasticsearch7\",\n      \"offset\": 10,\n      \"length\": 13,\n      \"options\": []\n    } ],\n    \"my-suggest-2\": ...\n  }\n}"
+    "source": "{\n  \"_shards\": ...\n  \"hits\": ...\n  \"took\": 2,\n  \"timed_out\": false,\n  \"suggest\": {\n    \"my-suggest-1\": [ {\n      \"text\": \"tring\",\n      \"offset\": 0,\n      \"length\": 5,\n      \"options\": [ {\"text\": \"trying\", \"score\": 0.8, \"freq\": 1 } ]\n    }, {\n      \"text\": \"out\",\n      \"offset\": 6,\n      \"length\": 3,\n      \"options\": []\n    }, {\n      \"text\": \"Elasticsearch6\",\n      \"offset\": 10,\n      \"length\": 13,\n      \"options\": []\n    } ],\n    \"my-suggest-2\": ...\n  }\n}"
   },
   {
     "source_location": {
@@ -80436,7 +80436,7 @@
       "go",
       "js"
     ],
-    "source": "POST _search\n{\n  \"suggest\": {\n    \"text\" : \"tring out Elasticsearch7\",\n    \"my-suggest-1\" : {\n      \"term\" : {\n        \"field\" : \"message\"\n      }\n    },\n    \"my-suggest-2\" : {\n       \"term\" : {\n        \"field\" : \"user\"\n       }\n    }\n  }\n}",
+    "source": "POST _search\n{\n  \"suggest\": {\n    \"text\" : \"tring out Elasticsearch6\",\n    \"my-suggest-1\" : {\n      \"term\" : {\n        \"field\" : \"message\"\n      }\n    },\n    \"my-suggest-2\" : {\n       \"term\" : {\n        \"field\" : \"user\"\n       }\n    }\n  }\n}",
     "parsed_source": [
       {
         "method": "POST",
@@ -81971,7 +81971,7 @@
     "digest": "a0a6e4abbf0a5d064d06d06ddc585f4c",
     "lang": "console",
     "found": [],
-    "source": "PUT twitter/_bulk?refresh\n{\"index\":{\"_id\":1}}\n{\"user\" : \"kimchy\", \"post_date\" : \"2009-11-15T14:12:12\", \"message\" : \"trying out Elasticsearch7\"}\n{\"index\":{\"_id\":2}}\n{\"user\" : \"kimchi\", \"post_date\" : \"2009-11-15T14:12:13\", \"message\" : \"My username is similar to @kimchy!\"}",
+    "source": "PUT twitter/_bulk?refresh\n{\"index\":{\"_id\":1}}\n{\"user\" : \"kimchy\", \"post_date\" : \"2009-11-15T14:12:12\", \"message\" : \"trying out Elasticsearch6\"}\n{\"index\":{\"_id\":2}}\n{\"user\" : \"kimchi\", \"post_date\" : \"2009-11-15T14:12:13\", \"message\" : \"My username is similar to @kimchy!\"}",
     "parsed_source": [
       {
         "method": "PUT",
@@ -82254,7 +82254,7 @@
     "digest": "abfec22fbe7d571711cc65661ca887ee",
     "lang": "console",
     "found": [],
-    "source": "GET /twitter/_explain/0\n{\n      \"query\" : {\n        \"match\" : { \"message\" : \"Elasticsearch7\" }\n      }\n}",
+    "source": "GET /twitter/_explain/0\n{\n      \"query\" : {\n        \"match\" : { \"message\" : \"Elasticsearch6\" }\n      }\n}",
     "parsed_source": [
       {
         "method": "GET",
@@ -82283,7 +82283,7 @@
     "digest": "abfec22fbe7d571711cc65661ca887ee",
     "lang": "console",
     "found": [],
-    "source": "GET /twitter/_explain/0\n{\n      \"query\" : {\n        \"match\" : { \"message\" : \"Elasticsearch7\" }\n      }\n}",
+    "source": "GET /twitter/_explain/0\n{\n      \"query\" : {\n        \"match\" : { \"message\" : \"Elasticsearch6\" }\n      }\n}",
     "parsed_source": [
       {
         "method": "GET",

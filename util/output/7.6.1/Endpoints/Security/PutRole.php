@@ -1,10 +1,10 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Endpoints\Security;
+namespace Elasticsearch6\Endpoints\Security;
 
-use Elasticsearch7\Common\Exceptions\RuntimeException;
-use Elasticsearch7\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Common\Exceptions\RuntimeException;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
 
 /**
  * Class PutRole
@@ -12,7 +12,7 @@ use Elasticsearch7\Endpoints\AbstractEndpoint;
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch7\Endpoints\Security
+ * @package  Elasticsearch6\Endpoints\Security
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

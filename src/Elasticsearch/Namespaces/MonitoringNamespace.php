@@ -15,9 +15,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Namespaces;
+namespace Elasticsearch6\Namespaces;
 
-use Elasticsearch7\Namespaces\AbstractNamespace;
+use Elasticsearch6\Namespaces\AbstractNamespace;
 
 /**
  * Class MonitoringNamespace

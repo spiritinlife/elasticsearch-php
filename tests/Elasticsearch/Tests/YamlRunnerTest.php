@@ -16,18 +16,18 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Tests;
+namespace Elasticsearch6\Tests;
 
 use Doctrine\Common\Inflector\Inflector;
 use Elasticsearch;
-use Elasticsearch7\Common\Exceptions\BadRequest400Exception;
-use Elasticsearch7\Common\Exceptions\Conflict409Exception;
-use Elasticsearch7\Common\Exceptions\Forbidden403Exception;
-use Elasticsearch7\Common\Exceptions\Missing404Exception;
-use Elasticsearch7\Common\Exceptions\RequestTimeout408Exception;
-use Elasticsearch7\Common\Exceptions\ServerErrorResponseException;
-use Elasticsearch7\Common\Exceptions\RoutingMissingException;
-use Elasticsearch7\Common\Exceptions\Unauthorized401Exception;
+use Elasticsearch6\Common\Exceptions\BadRequest400Exception;
+use Elasticsearch6\Common\Exceptions\Conflict409Exception;
+use Elasticsearch6\Common\Exceptions\Forbidden403Exception;
+use Elasticsearch6\Common\Exceptions\Missing404Exception;
+use Elasticsearch6\Common\Exceptions\RequestTimeout408Exception;
+use Elasticsearch6\Common\Exceptions\ServerErrorResponseException;
+use Elasticsearch6\Common\Exceptions\RoutingMissingException;
+use Elasticsearch6\Common\Exceptions\Unauthorized401Exception;
 use GuzzleHttp\Ring\Future\FutureArrayInterface;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -49,7 +49,7 @@ class YamlRunnerTest extends \PHPUnit\Framework\TestCase
     private $yaml;
 
     /**
-     * @var \Elasticsearch7\Client client used by elasticsearch
+     * @var \Elasticsearch6\Client client used by elasticsearch
      */
     private $client;
 
@@ -154,7 +154,7 @@ class YamlRunnerTest extends \PHPUnit\Framework\TestCase
 
     public function setUp()
     {
-        $this->client = Elasticsearch7\ClientBuilder::create()
+        $this->client = Elasticsearch6\ClientBuilder::create()
             ->setHosts([self::getHost()]);
         if (getenv('TEST_SUITE') === 'xpack') {
             $this->client->setSSLVerification(__DIR__ . '/../../../.ci/certs/ca.crt');
@@ -399,7 +399,7 @@ class YamlRunnerTest extends \PHPUnit\Framework\TestCase
         }
 
         // TODO remove this after cat testing situation resolved
-        if ($caller instanceof Elasticsearch7\Namespaces\CatNamespace) {
+        if ($caller instanceof Elasticsearch6\Namespaces\CatNamespace) {
             if (!isset($endpointParams->format)) {
                 $endpointParams->format = 'text';
             }

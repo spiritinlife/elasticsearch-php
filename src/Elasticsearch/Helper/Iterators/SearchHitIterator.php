@@ -16,7 +16,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Helper\Iterators;
+namespace Elasticsearch6\Helper\Iterators;
 
 use Iterator;
 

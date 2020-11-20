@@ -16,16 +16,16 @@ declare(strict_types = 1);
 
 namespace Elasticsearch;
 
-use Elasticsearch7\Common\Exceptions\BadMethodCallException;
-use Elasticsearch7\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch7\Common\Exceptions\NoNodesAvailableException;
-use Elasticsearch7\Common\Exceptions\BadRequest400Exception;
-use Elasticsearch7\Common\Exceptions\Missing404Exception;
-use Elasticsearch7\Common\Exceptions\TransportException;
-use Elasticsearch7\Endpoints\AbstractEndpoint;
-use Elasticsearch7\Namespaces\AbstractNamespace;
-use Elasticsearch7\Namespaces\NamespaceBuilderInterface;
-use Elasticsearch7\Namespaces\BooleanRequestWrapper;
+use Elasticsearch6\Common\Exceptions\BadMethodCallException;
+use Elasticsearch6\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch6\Common\Exceptions\NoNodesAvailableException;
+use Elasticsearch6\Common\Exceptions\BadRequest400Exception;
+use Elasticsearch6\Common\Exceptions\Missing404Exception;
+use Elasticsearch6\Common\Exceptions\TransportException;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Namespaces\AbstractNamespace;
+use Elasticsearch6\Namespaces\NamespaceBuilderInterface;
+use Elasticsearch6\Namespaces\BooleanRequestWrapper;
 :use-namespaces
 /**
  * Class Client

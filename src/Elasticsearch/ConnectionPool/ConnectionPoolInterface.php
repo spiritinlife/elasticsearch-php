@@ -16,9 +16,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\ConnectionPool;
+namespace Elasticsearch6\ConnectionPool;
 
-use Elasticsearch7\Connections\ConnectionInterface;
+use Elasticsearch6\Connections\ConnectionInterface;
 
 interface ConnectionPoolInterface
 {

@@ -16,14 +16,14 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Tests;
+namespace Elasticsearch6\Tests;
 
-use Elasticsearch7\Client;
-use Elasticsearch7\ClientBuilder;
-use Elasticsearch7\Common\Exceptions\BadRequest400Exception;
-use Elasticsearch7\Common\Exceptions\ElasticsearchException;
-use Elasticsearch7\Common\Exceptions\Missing404Exception;
-use Elasticsearch7\Tests\ClientBuilder\ArrayLogger;
+use Elasticsearch6\Client;
+use Elasticsearch6\ClientBuilder;
+use Elasticsearch6\Common\Exceptions\BadRequest400Exception;
+use Elasticsearch6\Common\Exceptions\ElasticsearchException;
+use Elasticsearch6\Common\Exceptions\Missing404Exception;
+use Elasticsearch6\Tests\ClientBuilder\ArrayLogger;
 use Psr\Log\LogLevel;
 
 /**

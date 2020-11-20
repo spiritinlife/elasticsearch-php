@@ -1,11 +1,11 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Endpoints;
+namespace Elasticsearch6\Endpoints;
 
-use Elasticsearch7\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch7\Endpoints\AbstractEndpoint;
-use Elasticsearch7\Serializers\SerializerInterface;
+use Elasticsearch6\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Serializers\SerializerInterface;
 use Traversable;
 
 /**
@@ -14,7 +14,7 @@ use Traversable;
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch7\Endpoints
+ * @package  Elasticsearch6\Endpoints
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

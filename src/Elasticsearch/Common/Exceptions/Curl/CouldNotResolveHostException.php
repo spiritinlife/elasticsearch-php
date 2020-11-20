@@ -16,10 +16,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Common\Exceptions\Curl;
+namespace Elasticsearch6\Common\Exceptions\Curl;
 
-use Elasticsearch7\Common\Exceptions\ElasticsearchException;
-use Elasticsearch7\Common\Exceptions\TransportException;
+use Elasticsearch6\Common\Exceptions\ElasticsearchException;
+use Elasticsearch6\Common\Exceptions\TransportException;
 
 class CouldNotResolveHostException extends TransportException implements ElasticsearchException
 {

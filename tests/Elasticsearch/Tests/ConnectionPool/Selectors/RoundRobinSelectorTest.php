@@ -16,10 +16,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Tests\ConnectionPool\Selectors;
+namespace Elasticsearch6\Tests\ConnectionPool\Selectors;
 
 use Elasticsearch;
-use Elasticsearch7\Connections\ConnectionInterface;
+use Elasticsearch6\Connections\ConnectionInterface;
 
 /**
  * Class SnifferTest
@@ -31,13 +31,13 @@ class RoundRobinSelectorTest extends \PHPUnit\Framework\TestCase
     /**
      * Add Ten connections, select 15 to verify round robin
      *
-     * @covers \Elasticsearch7\ConnectionPool\Selectors\RoundRobinSelector::select
+     * @covers \Elasticsearch6\ConnectionPool\Selectors\RoundRobinSelector::select
      *
      * @return void
      */
     public function testTenConnections()
     {
-        $roundRobin = new Elasticsearch7\ConnectionPool\Selectors\RoundRobinSelector();
+        $roundRobin = new Elasticsearch6\ConnectionPool\Selectors\RoundRobinSelector();
 
         $mockConnections = [];
         foreach (range(0, 9) as $index) {
@@ -70,13 +70,13 @@ class RoundRobinSelectorTest extends \PHPUnit\Framework\TestCase
      * Add Ten connections, select five, remove three, test another 10 to check
      * that the round-robining works after removing connections
      *
-     * @covers \Elasticsearch7\ConnectionPool\Selectors\RoundRobinSelector::select
+     * @covers \Elasticsearch6\ConnectionPool\Selectors\RoundRobinSelector::select
      *
      * @return void
      */
     public function testAddTenConnectionsTestFiveRemoveThreeTestTen()
     {
-        $roundRobin = new Elasticsearch7\ConnectionPool\Selectors\RoundRobinSelector();
+        $roundRobin = new Elasticsearch6\ConnectionPool\Selectors\RoundRobinSelector();
 
         $mockConnections = [];
         foreach (range(0, 9) as $index) {

@@ -16,10 +16,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Namespaces;
+namespace Elasticsearch6\Namespaces;
 
-use Elasticsearch7\Serializers\SerializerInterface;
-use Elasticsearch7\Transport;
+use Elasticsearch6\Serializers\SerializerInterface;
+use Elasticsearch6\Transport;
 
 interface NamespaceBuilderInterface
 {

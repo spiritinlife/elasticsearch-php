@@ -16,15 +16,15 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Tests\Endpoints;
+namespace Elasticsearch6\Tests\Endpoints;
 
-use Elasticsearch7\Endpoints\Snapshot\Status;
-use Elasticsearch7\Common\Exceptions;
+use Elasticsearch6\Endpoints\Snapshot\Status;
+use Elasticsearch6\Common\Exceptions;
 
 class StatusEndpointTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @var \Elasticsearch7\Endpoints\Snapshot\Status
+     * @var \Elasticsearch6\Endpoints\Snapshot\Status
      */
     private $endpoint;
 

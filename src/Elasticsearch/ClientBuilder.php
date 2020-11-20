@@ -18,21 +18,21 @@ declare(strict_types = 1);
 
 namespace Elasticsearch;
 
-use Elasticsearch7\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch7\Common\Exceptions\RuntimeException;
-use Elasticsearch7\Common\Exceptions\ElasticCloudIdParseException;
-use Elasticsearch7\Common\Exceptions\AuthenticationConfigException;
-use Elasticsearch7\ConnectionPool\AbstractConnectionPool;
-use Elasticsearch7\ConnectionPool\Selectors\RoundRobinSelector;
-use Elasticsearch7\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch7\ConnectionPool\StaticNoPingConnectionPool;
-use Elasticsearch7\Connections\Connection;
-use Elasticsearch7\Connections\ConnectionFactory;
-use Elasticsearch7\Connections\ConnectionFactoryInterface;
-use Elasticsearch7\Namespaces\NamespaceBuilderInterface;
-use Elasticsearch7\Serializers\SerializerInterface;
-use Elasticsearch7\ConnectionPool\Selectors;
-use Elasticsearch7\Serializers\SmartSerializer;
+use Elasticsearch6\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch6\Common\Exceptions\RuntimeException;
+use Elasticsearch6\Common\Exceptions\ElasticCloudIdParseException;
+use Elasticsearch6\Common\Exceptions\AuthenticationConfigException;
+use Elasticsearch6\ConnectionPool\AbstractConnectionPool;
+use Elasticsearch6\ConnectionPool\Selectors\RoundRobinSelector;
+use Elasticsearch6\ConnectionPool\Selectors\SelectorInterface;
+use Elasticsearch6\ConnectionPool\StaticNoPingConnectionPool;
+use Elasticsearch6\Connections\Connection;
+use Elasticsearch6\Connections\ConnectionFactory;
+use Elasticsearch6\Connections\ConnectionFactoryInterface;
+use Elasticsearch6\Namespaces\NamespaceBuilderInterface;
+use Elasticsearch6\Serializers\SerializerInterface;
+use Elasticsearch6\ConnectionPool\Selectors;
+use Elasticsearch6\Serializers\SmartSerializer;
 use GuzzleHttp\Ring\Client\CurlHandler;
 use GuzzleHttp\Ring\Client\CurlMultiHandler;
 use GuzzleHttp\Ring\Client\Middleware;
@@ -326,7 +326,7 @@ class ClientBuilder
     }
 
     /**
-     * @param \Elasticsearch7\Serializers\SerializerInterface|string $serializer
+     * @param \Elasticsearch6\Serializers\SerializerInterface|string $serializer
      */
     public function setSerializer($serializer): ClientBuilder
     {
@@ -427,7 +427,7 @@ class ClientBuilder
     }
 
     /**
-     * @param \Elasticsearch7\ConnectionPool\Selectors\SelectorInterface|string $selector
+     * @param \Elasticsearch6\ConnectionPool\Selectors\SelectorInterface|string $selector
      */
     public function setSelector($selector): ClientBuilder
     {
@@ -562,7 +562,7 @@ class ClientBuilder
             $serializer = $this->serializer;
 
             $this->endpoint = function ($class) use ($serializer) {
-                $fullPath = '\\Elasticsearch7\\Endpoints\\' . $class;
+                $fullPath = '\\Elasticsearch6\\Endpoints\\' . $class;
                 if ($class === 'Bulk' || $class === 'Msearch' || $class === 'MsearchTemplate' || $class === 'MPercolate') {
                     return new $fullPath($serializer);
                 } else {
@@ -644,7 +644,7 @@ class ClientBuilder
     }
 
     /**
-     * @return \Elasticsearch7\Connections\Connection[]
+     * @return \Elasticsearch6\Connections\Connection[]
      * @throws RuntimeException
      */
     private function buildConnectionsFromHosts(array $hosts): array

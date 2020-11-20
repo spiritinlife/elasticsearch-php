@@ -15,7 +15,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Tests\ClientBuilder;
+namespace Elasticsearch6\Tests\ClientBuilder;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;

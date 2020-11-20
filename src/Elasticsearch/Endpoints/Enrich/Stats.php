@@ -15,9 +15,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Endpoints\Enrich;
+namespace Elasticsearch6\Endpoints\Enrich;
 
-use Elasticsearch7\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
 
 /**
  * Class Stats

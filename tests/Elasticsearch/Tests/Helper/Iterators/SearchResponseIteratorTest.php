@@ -16,10 +16,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Tests\Helper\Iterators;
+namespace Elasticsearch6\Tests\Helper\Iterators;
 
-use Elasticsearch7\Client;
-use Elasticsearch7\Helper\Iterators\SearchResponseIterator;
+use Elasticsearch6\Client;
+use Elasticsearch6\Helper\Iterators\SearchResponseIterator;
 use Mockery as m;
 
 /**

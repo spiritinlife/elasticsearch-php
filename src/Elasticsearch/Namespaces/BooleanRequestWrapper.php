@@ -16,12 +16,12 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Namespaces;
+namespace Elasticsearch6\Namespaces;
 
-use Elasticsearch7\Common\Exceptions\Missing404Exception;
-use Elasticsearch7\Common\Exceptions\RoutingMissingException;
-use Elasticsearch7\Endpoints\AbstractEndpoint;
-use Elasticsearch7\Transport;
+use Elasticsearch6\Common\Exceptions\Missing404Exception;
+use Elasticsearch6\Common\Exceptions\RoutingMissingException;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Transport;
 use GuzzleHttp\Ring\Future\FutureArrayInterface;
 
 trait BooleanRequestWrapper

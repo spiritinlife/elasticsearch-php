@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Endpoints\Snapshot;
+namespace Elasticsearch6\Endpoints\Snapshot;
 
-use Elasticsearch7\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
 
 /**
  * Class Status
@@ -11,7 +11,7 @@ use Elasticsearch7\Endpoints\AbstractEndpoint;
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch7\Endpoints\Snapshot
+ * @package  Elasticsearch6\Endpoints\Snapshot
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

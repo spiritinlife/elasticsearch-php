@@ -16,27 +16,27 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Connections;
+namespace Elasticsearch6\Connections;
 
-use Elasticsearch7\Client;
-use Elasticsearch7\Common\Exceptions\BadRequest400Exception;
-use Elasticsearch7\Common\Exceptions\Conflict409Exception;
-use Elasticsearch7\Common\Exceptions\Curl\CouldNotConnectToHost;
-use Elasticsearch7\Common\Exceptions\Curl\CouldNotResolveHostException;
-use Elasticsearch7\Common\Exceptions\Curl\OperationTimeoutException;
-use Elasticsearch7\Common\Exceptions\ElasticsearchException;
-use Elasticsearch7\Common\Exceptions\Forbidden403Exception;
-use Elasticsearch7\Common\Exceptions\MaxRetriesException;
-use Elasticsearch7\Common\Exceptions\Missing404Exception;
-use Elasticsearch7\Common\Exceptions\NoDocumentsToGetException;
-use Elasticsearch7\Common\Exceptions\NoShardAvailableException;
-use Elasticsearch7\Common\Exceptions\RequestTimeout408Exception;
-use Elasticsearch7\Common\Exceptions\RoutingMissingException;
-use Elasticsearch7\Common\Exceptions\ScriptLangNotSupportedException;
-use Elasticsearch7\Common\Exceptions\ServerErrorResponseException;
-use Elasticsearch7\Common\Exceptions\TransportException;
-use Elasticsearch7\Serializers\SerializerInterface;
-use Elasticsearch7\Transport;
+use Elasticsearch6\Client;
+use Elasticsearch6\Common\Exceptions\BadRequest400Exception;
+use Elasticsearch6\Common\Exceptions\Conflict409Exception;
+use Elasticsearch6\Common\Exceptions\Curl\CouldNotConnectToHost;
+use Elasticsearch6\Common\Exceptions\Curl\CouldNotResolveHostException;
+use Elasticsearch6\Common\Exceptions\Curl\OperationTimeoutException;
+use Elasticsearch6\Common\Exceptions\ElasticsearchException;
+use Elasticsearch6\Common\Exceptions\Forbidden403Exception;
+use Elasticsearch6\Common\Exceptions\MaxRetriesException;
+use Elasticsearch6\Common\Exceptions\Missing404Exception;
+use Elasticsearch6\Common\Exceptions\NoDocumentsToGetException;
+use Elasticsearch6\Common\Exceptions\NoShardAvailableException;
+use Elasticsearch6\Common\Exceptions\RequestTimeout408Exception;
+use Elasticsearch6\Common\Exceptions\RoutingMissingException;
+use Elasticsearch6\Common\Exceptions\ScriptLangNotSupportedException;
+use Elasticsearch6\Common\Exceptions\ServerErrorResponseException;
+use Elasticsearch6\Common\Exceptions\TransportException;
+use Elasticsearch6\Serializers\SerializerInterface;
+use Elasticsearch6\Transport;
 use GuzzleHttp\Ring\Core;
 use GuzzleHttp\Ring\Exception\ConnectException;
 use GuzzleHttp\Ring\Exception\RingException;

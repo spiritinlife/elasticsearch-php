@@ -15,9 +15,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Endpoints\Cat;
+namespace Elasticsearch6\Endpoints\Cat;
 
-use Elasticsearch7\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
 
 /**
  * Class MlDataFrameAnalytics

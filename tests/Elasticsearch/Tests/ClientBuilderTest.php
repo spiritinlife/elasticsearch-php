@@ -16,13 +16,13 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Tests;
+namespace Elasticsearch6\Tests;
 
-use Elasticsearch7\Client;
-use Elasticsearch7\ClientBuilder;
-use Elasticsearch7\Common\Exceptions\ElasticsearchException;
-use Elasticsearch7\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch7\Tests\ClientBuilder\DummyLogger;
+use Elasticsearch6\Client;
+use Elasticsearch6\ClientBuilder;
+use Elasticsearch6\Common\Exceptions\ElasticsearchException;
+use Elasticsearch6\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch6\Tests\ClientBuilder\DummyLogger;
 use GuzzleHttp\Ring\Client\MockHandler;
 use PHPUnit\Framework\TestCase;
 

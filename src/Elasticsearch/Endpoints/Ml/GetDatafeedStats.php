@@ -15,9 +15,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Endpoints\Ml;
+namespace Elasticsearch6\Endpoints\Ml;
 
-use Elasticsearch7\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
 
 /**
  * Class GetDatafeedStats

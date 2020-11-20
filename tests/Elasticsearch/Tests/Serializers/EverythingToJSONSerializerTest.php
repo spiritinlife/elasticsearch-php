@@ -16,9 +16,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Tests\Serializers;
+namespace Elasticsearch6\Tests\Serializers;
 
-use Elasticsearch7\Serializers\EverythingToJSONSerializer;
+use Elasticsearch6\Serializers\EverythingToJSONSerializer;
 use Mockery as m;
 
 /**

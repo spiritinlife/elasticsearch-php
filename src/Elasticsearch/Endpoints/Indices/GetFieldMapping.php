@@ -15,10 +15,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Endpoints\Indices;
+namespace Elasticsearch6\Endpoints\Indices;
 
-use Elasticsearch7\Common\Exceptions\RuntimeException;
-use Elasticsearch7\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Common\Exceptions\RuntimeException;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
 
 /**
  * Class GetFieldMapping

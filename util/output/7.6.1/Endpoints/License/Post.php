@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Endpoints\License;
+namespace Elasticsearch6\Endpoints\License;
 
-use Elasticsearch7\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
 
 /**
  * Class Post
@@ -11,7 +11,7 @@ use Elasticsearch7\Endpoints\AbstractEndpoint;
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch7\Endpoints\License
+ * @package  Elasticsearch6\Endpoints\License
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

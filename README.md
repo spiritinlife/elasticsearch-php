@@ -127,7 +127,7 @@ The recommended method to install _Elasticsearch-PHP_ is through [Composer](http
     ```php
         <?php
 
-        use Elasticsearch7\ClientBuilder;
+        use Elasticsearch6\ClientBuilder;
 
         require 'vendor/autoload.php';
 
@@ -412,7 +412,7 @@ Unit Testing using Mock a Elastic Client
 ========================================
 ```php
 use GuzzleHttp\Ring\Client\MockHandler;
-use Elasticsearch7\ClientBuilder;
+use Elasticsearch6\ClientBuilder;
 
 // The connection class requires 'body' to be a file stream handle
 // Depending on what kind of request you do, you may need to set more values here

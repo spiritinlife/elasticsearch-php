@@ -16,9 +16,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Connections;
+namespace Elasticsearch6\Connections;
 
-use Elasticsearch7\Serializers\SerializerInterface;
+use Elasticsearch6\Serializers\SerializerInterface;
 use Psr\Log\LoggerInterface;
 
 class ConnectionFactory implements ConnectionFactoryInterface

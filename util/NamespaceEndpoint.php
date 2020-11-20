@@ -15,7 +15,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch7\Util;
+namespace Elasticsearch6\Util;
 
 use Exception;
 
