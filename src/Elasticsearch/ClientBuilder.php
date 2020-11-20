@@ -4,18 +4,18 @@ declare(strict_types = 1);
 
 namespace Elasticsearch;
 
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\ConnectionPool\AbstractConnectionPool;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\ConnectionPool\StaticNoPingConnectionPool;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionFactory;
-use Elasticsearch\Connections\ConnectionFactoryInterface;
-use Elasticsearch\Namespaces\NamespaceBuilderInterface;
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\ConnectionPool\Selectors;
-use Elasticsearch\Serializers\SmartSerializer;
+use Elasticsearch6\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch6\Common\Exceptions\RuntimeException;
+use Elasticsearch6\ConnectionPool\AbstractConnectionPool;
+use Elasticsearch6\ConnectionPool\Selectors\SelectorInterface;
+use Elasticsearch6\ConnectionPool\StaticNoPingConnectionPool;
+use Elasticsearch6\Connections\Connection;
+use Elasticsearch6\Connections\ConnectionFactory;
+use Elasticsearch6\Connections\ConnectionFactoryInterface;
+use Elasticsearch6\Namespaces\NamespaceBuilderInterface;
+use Elasticsearch6\Serializers\SerializerInterface;
+use Elasticsearch6\ConnectionPool\Selectors;
+use Elasticsearch6\Serializers\SmartSerializer;
 use GuzzleHttp\Ring\Client\CurlHandler;
 use GuzzleHttp\Ring\Client\CurlMultiHandler;
 use GuzzleHttp\Ring\Client\Middleware;
@@ -26,7 +26,7 @@ use Psr\Log\NullLogger;
  * Class ClientBuilder
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Common\Exceptions
+ * @package  Elasticsearch6\Common\Exceptions
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
@@ -54,13 +54,13 @@ class ClientBuilder
     private $tracer;
 
     /** @var string */
-    private $connectionPool = '\Elasticsearch\ConnectionPool\StaticNoPingConnectionPool';
+    private $connectionPool = '\Elasticsearch6\ConnectionPool\StaticNoPingConnectionPool';
 
     /** @var  string */
-    private $serializer = '\Elasticsearch\Serializers\SmartSerializer';
+    private $serializer = '\Elasticsearch6\Serializers\SmartSerializer';
 
     /** @var  string */
-    private $selector = '\Elasticsearch\ConnectionPool\Selectors\RoundRobinSelector';
+    private $selector = '\Elasticsearch6\ConnectionPool\Selectors\RoundRobinSelector';
 
     /** @var  array */
     private $connectionPoolArgs = [
@@ -140,7 +140,7 @@ class ClientBuilder
      * @param bool $quiet False if unknown settings throw exception, true to silently
      *                    ignore unknown settings
      * @throws Common\Exceptions\RuntimeException
-     * @return \Elasticsearch\Client
+     * @return \Elasticsearch6\Client
      */
     public static function fromConfig($config, $quiet = false)
     {
@@ -212,7 +212,7 @@ class ClientBuilder
     }
 
     /**
-     * @param \Elasticsearch\Connections\ConnectionFactoryInterface $connectionFactory
+     * @param \Elasticsearch6\Connections\ConnectionFactoryInterface $connectionFactory
      * @return $this
      */
     public function setConnectionFactory(ConnectionFactoryInterface $connectionFactory)
@@ -223,7 +223,7 @@ class ClientBuilder
     }
 
     /**
-     * @param \Elasticsearch\ConnectionPool\AbstractConnectionPool|string $connectionPool
+     * @param \Elasticsearch6\ConnectionPool\AbstractConnectionPool|string $connectionPool
      * @param array $args
      * @throws \InvalidArgumentException
      * @return $this
@@ -265,7 +265,7 @@ class ClientBuilder
     }
 
     /**
-     * @param \Elasticsearch\Transport $transport
+     * @param \Elasticsearch6\Transport $transport
      * @return $this
      */
     public function setTransport($transport)
@@ -317,7 +317,7 @@ class ClientBuilder
     }
 
     /**
-     * @param \Elasticsearch\Serializers\SerializerInterface|string $serializer
+     * @param \Elasticsearch6\Serializers\SerializerInterface|string $serializer
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -362,7 +362,7 @@ class ClientBuilder
     }
 
     /**
-     * @param \Elasticsearch\ConnectionPool\Selectors\SelectorInterface|string $selector
+     * @param \Elasticsearch6\ConnectionPool\Selectors\SelectorInterface|string $selector
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -502,7 +502,7 @@ class ClientBuilder
             $serializer = $this->serializer;
 
             $this->endpoint = function ($class) use ($serializer) {
-                $fullPath = '\\Elasticsearch\\Endpoints\\' . $class;
+                $fullPath = '\\Elasticsearch6\\Endpoints\\' . $class;
                 if ($class === 'Bulk' || $class === 'Msearch' || $class === 'MsearchTemplate' || $class === 'MPercolate') {
                     return new $fullPath($serializer);
                 } else {
@@ -594,7 +594,7 @@ class ClientBuilder
      * @param array $hosts
      *
      * @throws \InvalidArgumentException
-     * @return \Elasticsearch\Connections\Connection[]
+     * @return \Elasticsearch6\Connections\Connection[]
      */
     private function buildConnectionsFromHosts($hosts)
     {

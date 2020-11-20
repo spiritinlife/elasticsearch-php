@@ -7,16 +7,16 @@ declare(strict_types = 1);
  * Time: 14:34:49 pm
  */
 
-namespace Elasticsearch\Endpoints\Cat;
+namespace Elasticsearch6\Endpoints\Cat;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Common\Exceptions;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Common\Exceptions;
 
 /**
  * Class Segments
  *
  * @category Elasticsearch
- * @package Elasticsearch\Endpoints\Cat
+ * @package Elasticsearch6\Endpoints\Cat
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

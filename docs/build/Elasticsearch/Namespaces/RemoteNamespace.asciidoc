@@ -1,7 +1,7 @@
 
 
 [[Elasticsearch_Namespaces_RemoteNamespace]]
-=== Elasticsearch\Namespaces\RemoteNamespace
+=== Elasticsearch6\Namespaces\RemoteNamespace
 
 
 

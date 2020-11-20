@@ -2,16 +2,16 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Tasks;
+namespace Elasticsearch6\Endpoints\Tasks;
 
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Common\Exceptions;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
 
 /**
  * Class TasksLists
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Tasks
+ * @package  Elasticsearch6\Endpoints\Tasks
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
@@ -20,7 +20,7 @@ class TasksList extends AbstractEndpoint
 {
 
     /**
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Elasticsearch6\Common\Exceptions\RuntimeException
      * @return string
      */
     public function getURI()

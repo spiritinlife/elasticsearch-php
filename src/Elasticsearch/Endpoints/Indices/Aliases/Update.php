@@ -2,16 +2,16 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Indices\Aliases;
+namespace Elasticsearch6\Endpoints\Indices\Aliases;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Common\Exceptions;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Common\Exceptions;
 
 /**
  * Class Update
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Indices\Aliases
+ * @package  Elasticsearch6\Endpoints\Indices\Aliases
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
@@ -21,7 +21,7 @@ class Update extends AbstractEndpoint
     /**
      * @param array $body
      *
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @throws \Elasticsearch6\Common\Exceptions\InvalidArgumentException
      * @return $this
      */
     public function setBody($body)
@@ -58,7 +58,7 @@ class Update extends AbstractEndpoint
 
     /**
      * @return array
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Elasticsearch6\Common\Exceptions\RuntimeException
      */
     public function getBody()
     {

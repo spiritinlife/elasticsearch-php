@@ -2,16 +2,16 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Indices\Mapping;
+namespace Elasticsearch6\Endpoints\Indices\Mapping;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Common\Exceptions;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Common\Exceptions;
 
 /**
  * Class GetField
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Indices\Mapping
+ * @package  Elasticsearch6\Endpoints\Indices\Mapping
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
@@ -42,7 +42,7 @@ class GetField extends AbstractEndpoint
     }
 
     /**
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Elasticsearch6\Common\Exceptions\RuntimeException
      * @return string
      */
     public function getURI()

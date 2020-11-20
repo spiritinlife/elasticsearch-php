@@ -2,13 +2,13 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Serializers;
+namespace Elasticsearch6\Serializers;
 
 /**
  * Interface SerializerInterface
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Serializers
+ * @package  Elasticsearch6\Serializers
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

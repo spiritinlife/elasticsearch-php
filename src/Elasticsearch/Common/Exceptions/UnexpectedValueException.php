@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Elasticsearch6\Common\Exceptions;
 
 /**
  * UnexpectedValueException
@@ -10,7 +10,7 @@ namespace Elasticsearch\Common\Exceptions;
  * Denote a value that is outside the normally accepted values
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Common\Exceptions
+ * @package  Elasticsearch6\Common\Exceptions
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

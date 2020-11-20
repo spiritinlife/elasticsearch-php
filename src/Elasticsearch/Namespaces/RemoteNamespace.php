@@ -2,15 +2,15 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch6\Namespaces;
 
-use Elasticsearch\Endpoints\Remote\Info;
+use Elasticsearch6\Endpoints\Remote\Info;
 
 /**
  * Class RemoteNamespace
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Namespaces\TasksNamespace
+ * @package  Elasticsearch6\Namespaces\TasksNamespace
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

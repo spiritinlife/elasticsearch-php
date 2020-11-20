@@ -1,10 +1,10 @@
 <?php
-namespace Elasticsearch\Tests\Connections;
+namespace Elasticsearch6\Tests\Connections;
 
-use Elasticsearch\Client;
-use Elasticsearch\ClientBuilder;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Serializers\SerializerInterface;
+use Elasticsearch6\Client;
+use Elasticsearch6\ClientBuilder;
+use Elasticsearch6\Connections\Connection;
+use Elasticsearch6\Serializers\SerializerInterface;
 use Psr\Log\LoggerInterface;
 
 class ConnectionTest extends \PHPUnit\Framework\TestCase

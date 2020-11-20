@@ -1,7 +1,7 @@
 
 
 [[Elasticsearch_ClientBuilder]]
-=== Elasticsearch\ClientBuilder
+=== Elasticsearch6\ClientBuilder
 
 
 

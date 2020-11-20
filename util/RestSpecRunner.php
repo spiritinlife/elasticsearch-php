@@ -19,14 +19,14 @@ echo "Base directory: ". dirname(__DIR__)."\n";
 // Include the composer autoloader
 $autoloader = require_once(dirname(__DIR__) . '/vendor/autoload.php');
 
-$client = \Elasticsearch\ClientBuilder::fromConfig([
+$client = \Elasticsearch6\ClientBuilder::fromConfig([
 	'hosts' => [$_SERVER['ES_TEST_HOST']]
 ]);
 $serverInfo = $client->info();
 var_dump($serverInfo);
 
 $gitWrapper = new \GitWrapper\GitWrapper();
-echo "Git cwd: ".dirname(__DIR__) . "/util/elasticsearch\n";
+echo "Git cwd: ".dirname(__DIR__) . "/util/Elasticsearch6\n";
 $git = $gitWrapper->workingCopy(dirname(__DIR__) . '/util/elasticsearch');
 
 echo "Update elasticsearch submodule\n";

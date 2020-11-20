@@ -2,12 +2,12 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\ConnectionPool;
+namespace Elasticsearch6\ConnectionPool;
 
-use Elasticsearch\Common\Exceptions\NoNodesAvailableException;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionFactoryInterface;
+use Elasticsearch6\Common\Exceptions\NoNodesAvailableException;
+use Elasticsearch6\ConnectionPool\Selectors\SelectorInterface;
+use Elasticsearch6\Connections\Connection;
+use Elasticsearch6\Connections\ConnectionFactoryInterface;
 
 class StaticNoPingConnectionPool extends AbstractConnectionPool implements ConnectionPoolInterface
 {
@@ -33,7 +33,7 @@ class StaticNoPingConnectionPool extends AbstractConnectionPool implements Conne
      * @param bool $force
      *
      * @return Connection
-     * @throws \Elasticsearch\Common\Exceptions\NoNodesAvailableException
+     * @throws \Elasticsearch6\Common\Exceptions\NoNodesAvailableException
      */
     public function nextConnection($force = false)
     {
@@ -58,7 +58,7 @@ class StaticNoPingConnectionPool extends AbstractConnectionPool implements Conne
     }
 
     /**
-     * @param \Elasticsearch\Connections\Connection $connection
+     * @param \Elasticsearch6\Connections\Connection $connection
      *
      * @return bool
      */

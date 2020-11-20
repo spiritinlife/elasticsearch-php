@@ -2,23 +2,23 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch6\Namespaces;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Transport;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Transport;
 
 /**
  * Class AbstractNamespace
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Namespaces
+ * @package  Elasticsearch6\Namespaces
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
  */
 abstract class AbstractNamespace
 {
-    /** @var \Elasticsearch\Transport  */
+    /** @var \Elasticsearch6\Transport  */
     protected $transport;
 
     /** @var callable */

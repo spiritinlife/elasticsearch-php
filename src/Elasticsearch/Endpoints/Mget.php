@@ -2,15 +2,15 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints;
+namespace Elasticsearch6\Endpoints;
 
-use Elasticsearch\Common\Exceptions;
+use Elasticsearch6\Common\Exceptions;
 
 /**
  * Class Mget
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints
+ * @package  Elasticsearch6\Endpoints
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
@@ -20,7 +20,7 @@ class Mget extends AbstractEndpoint
     /**
      * @param array $body
      *
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @throws \Elasticsearch6\Common\Exceptions\InvalidArgumentException
      * @return $this
      */
     public function setBody($body)
@@ -76,7 +76,7 @@ class Mget extends AbstractEndpoint
 
     /**
      * @return array
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Elasticsearch6\Common\Exceptions\RuntimeException
      */
     public function getBody()
     {

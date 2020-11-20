@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests\ConnectionPool;
+namespace Elasticsearch6\Tests\ConnectionPool;
 
-use Elasticsearch\ClientBuilder;
-use Elasticsearch\ConnectionPool\SniffingConnectionPool;
+use Elasticsearch6\ClientBuilder;
+use Elasticsearch6\ConnectionPool\SniffingConnectionPool;
 
 /**
  * Class SniffingConnectionPoolIntegrationTest

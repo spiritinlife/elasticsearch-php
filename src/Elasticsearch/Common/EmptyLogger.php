@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common;
+namespace Elasticsearch6\Common;
 
 use Psr\Log\AbstractLogger;
 use Psr\Log\LoggerInterface;
@@ -14,7 +14,7 @@ use Psr\Log\LoggerInterface;
  * but avoids the overhead of partially loading Monolog
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Common
+ * @package  Elasticsearch6\Common
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

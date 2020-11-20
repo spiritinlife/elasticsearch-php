@@ -2,16 +2,16 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Cluster\Nodes;
+namespace Elasticsearch6\Endpoints\Cluster\Nodes;
 
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch6\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch6\Endpoints\AbstractEndpoint;
 
 /**
  * Class AbstractNodesEndpoint
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Cluster\Nodes
+ * @package  Elasticsearch6\Endpoints\Cluster\Nodes
  * @author   Zachary Tong <zach@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
@@ -30,7 +30,7 @@ abstract class AbstractNodesEndpoint extends AbstractEndpoint
     /**
      * @param string|string[] $nodeID
      *
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @throws \Elasticsearch6\Common\Exceptions\InvalidArgumentException
      *
      * @return $this
      */

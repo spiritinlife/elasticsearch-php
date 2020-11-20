@@ -1,7 +1,7 @@
 
 
 [[Elasticsearch_Namespaces_CatNamespace]]
-=== Elasticsearch\Namespaces\CatNamespace
+=== Elasticsearch6\Namespaces\CatNamespace
 
 
 
