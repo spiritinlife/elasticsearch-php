@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch;
+namespace Elasticsearch6;
 
 use Elasticsearch6\Common\Exceptions;
 use Elasticsearch6\ConnectionPool\AbstractConnectionPool;
