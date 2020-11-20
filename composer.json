@@ -37,14 +37,14 @@
       "src/autoload.php"
     ],
     "psr-4": {
-      "Elasticsearch\\": "src/Elasticsearch/"
+      "Elasticsearch7\\": "src/Elasticsearch/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Elasticsearch\\Tests\\": "tests/Elasticsearch/Tests/",
-      "Elasticsearch\\IntegrationTests\\": "tests/Elasticsearch/IntegrationTests/",
-      "Elasticsearch\\Util\\": "util/"
+      "Elasticsearch7\\Tests\\": "tests/Elasticsearch/Tests/",
+      "Elasticsearch7\\IntegrationTests\\": "tests/Elasticsearch/IntegrationTests/",
+      "Elasticsearch7\\Util\\": "util/"
     }
   },
   "config": {

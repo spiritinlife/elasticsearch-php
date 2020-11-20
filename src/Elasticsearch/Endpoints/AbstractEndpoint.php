@@ -16,11 +16,11 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints;
+namespace Elasticsearch7\Endpoints;
 
-use Elasticsearch\Common\Exceptions\UnexpectedValueException;
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Elasticsearch7\Common\Exceptions\UnexpectedValueException;
+use Elasticsearch7\Serializers\SerializerInterface;
+use Elasticsearch7\Transport;
 use Exception;
 use GuzzleHttp\Ring\Future\FutureArrayInterface;
 

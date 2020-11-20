@@ -15,10 +15,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Security;
+namespace Elasticsearch7\Endpoints\Security;
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Common\Exceptions\RuntimeException;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 /**
  * Class DeleteRole

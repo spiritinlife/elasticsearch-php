@@ -16,7 +16,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Elasticsearch7\Common\Exceptions;
 
 class Forbidden403Exception extends \Exception implements ElasticsearchException
 {

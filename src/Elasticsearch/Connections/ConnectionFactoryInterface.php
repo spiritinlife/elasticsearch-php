@@ -16,7 +16,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Connections;
+namespace Elasticsearch7\Connections;
 
 interface ConnectionFactoryInterface
 {

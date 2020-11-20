@@ -16,7 +16,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Serializers;
+namespace Elasticsearch7\Serializers;
 
 interface SerializerInterface
 {

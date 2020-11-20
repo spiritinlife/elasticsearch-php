@@ -18,10 +18,10 @@ declare(strict_types = 1);
 
 namespace Elasticsearch;
 
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\ConnectionPool\AbstractConnectionPool;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionInterface;
+use Elasticsearch7\Common\Exceptions;
+use Elasticsearch7\ConnectionPool\AbstractConnectionPool;
+use Elasticsearch7\Connections\Connection;
+use Elasticsearch7\Connections\ConnectionInterface;
 use GuzzleHttp\Ring\Future\FutureArrayInterface;
 use Psr\Log\LoggerInterface;
 

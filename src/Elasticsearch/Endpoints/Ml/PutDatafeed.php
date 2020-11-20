@@ -15,10 +15,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Ml;
+namespace Elasticsearch7\Endpoints\Ml;
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Common\Exceptions\RuntimeException;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 /**
  * Class PutDatafeed

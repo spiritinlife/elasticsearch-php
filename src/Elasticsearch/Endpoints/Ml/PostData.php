@@ -15,12 +15,12 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Ml;
+namespace Elasticsearch7\Endpoints\Ml;
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Serializers\SerializerInterface;
+use Elasticsearch7\Common\Exceptions\RuntimeException;
+use Elasticsearch7\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Serializers\SerializerInterface;
 use Traversable;
 
 /**

@@ -16,7 +16,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common;
+namespace Elasticsearch7\Common;
 
 use Psr\Log\AbstractLogger;
 use Psr\Log\LoggerInterface;

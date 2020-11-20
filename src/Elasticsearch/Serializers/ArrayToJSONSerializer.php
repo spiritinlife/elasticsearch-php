@@ -16,9 +16,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Serializers;
+namespace Elasticsearch7\Serializers;
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
+use Elasticsearch7\Common\Exceptions\RuntimeException;
 
 if (!defined('JSON_INVALID_UTF8_SUBSTITUTE')) {
     //PHP < 7.2 Define it as 0 so it does nothing

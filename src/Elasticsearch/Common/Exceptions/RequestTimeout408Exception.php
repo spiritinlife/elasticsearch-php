@@ -16,7 +16,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Elasticsearch7\Common\Exceptions;
 
 class RequestTimeout408Exception extends BadRequest400Exception implements ElasticsearchException
 {

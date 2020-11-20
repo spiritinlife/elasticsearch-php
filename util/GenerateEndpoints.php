@@ -16,9 +16,9 @@
 declare(strict_types = 1);
 
 use GitWrapper\GitWrapper;
-use Elasticsearch\Util\ClientEndpoint;
-use Elasticsearch\Util\Endpoint;
-use Elasticsearch\Util\NamespaceEndpoint;
+use Elasticsearch7\Util\ClientEndpoint;
+use Elasticsearch7\Util\Endpoint;
+use Elasticsearch7\Util\NamespaceEndpoint;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 

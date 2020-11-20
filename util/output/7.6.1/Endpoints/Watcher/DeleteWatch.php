@@ -1,10 +1,10 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Watcher;
+namespace Elasticsearch7\Endpoints\Watcher;
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Common\Exceptions\RuntimeException;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 /**
  * Class DeleteWatch
@@ -12,7 +12,7 @@ use Elasticsearch\Endpoints\AbstractEndpoint;
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Watcher
+ * @package  Elasticsearch7\Endpoints\Watcher
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

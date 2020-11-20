@@ -16,10 +16,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common\Exceptions\Curl;
+namespace Elasticsearch7\Common\Exceptions\Curl;
 
-use Elasticsearch\Common\Exceptions\ElasticsearchException;
-use Elasticsearch\Common\Exceptions\TransportException;
+use Elasticsearch7\Common\Exceptions\ElasticsearchException;
+use Elasticsearch7\Common\Exceptions\TransportException;
 
 class OperationTimeoutException extends TransportException implements ElasticsearchException
 {

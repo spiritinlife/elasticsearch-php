@@ -1,10 +1,10 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Rollup;
+namespace Elasticsearch7\Endpoints\Rollup;
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Common\Exceptions\RuntimeException;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 /**
  * Class PutJob
@@ -12,7 +12,7 @@ use Elasticsearch\Endpoints\AbstractEndpoint;
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Rollup
+ * @package  Elasticsearch7\Endpoints\Rollup
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

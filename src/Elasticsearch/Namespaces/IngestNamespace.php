@@ -15,9 +15,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch7\Namespaces;
 
-use Elasticsearch\Namespaces\AbstractNamespace;
+use Elasticsearch7\Namespaces\AbstractNamespace;
 
 /**
  * Class IngestNamespace

@@ -1,10 +1,10 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Graph;
+namespace Elasticsearch7\Endpoints\Graph;
 
-use Elasticsearch\Common\Exceptions\RuntimeException;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Common\Exceptions\RuntimeException;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 /**
  * Class Explore
@@ -12,7 +12,7 @@ use Elasticsearch\Endpoints\AbstractEndpoint;
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Graph
+ * @package  Elasticsearch7\Endpoints\Graph
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

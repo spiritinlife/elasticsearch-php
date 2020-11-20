@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Ingest;
+namespace Elasticsearch7\Endpoints\Ingest;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 /**
  * Class ProcessorGrok
@@ -11,7 +11,7 @@ use Elasticsearch\Endpoints\AbstractEndpoint;
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Ingest
+ * @package  Elasticsearch7\Endpoints\Ingest
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Security;
+namespace Elasticsearch7\Endpoints\Security;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 /**
  * Class ChangePassword
@@ -11,7 +11,7 @@ use Elasticsearch\Endpoints\AbstractEndpoint;
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Security
+ * @package  Elasticsearch7\Endpoints\Security
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

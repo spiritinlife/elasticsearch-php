@@ -16,14 +16,14 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\ConnectionPool;
+namespace Elasticsearch7\ConnectionPool;
 
-use Elasticsearch\Common\Exceptions\Curl\OperationTimeoutException;
-use Elasticsearch\Common\Exceptions\NoNodesAvailableException;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionInterface;
-use Elasticsearch\Connections\ConnectionFactoryInterface;
+use Elasticsearch7\Common\Exceptions\Curl\OperationTimeoutException;
+use Elasticsearch7\Common\Exceptions\NoNodesAvailableException;
+use Elasticsearch7\ConnectionPool\Selectors\SelectorInterface;
+use Elasticsearch7\Connections\Connection;
+use Elasticsearch7\Connections\ConnectionInterface;
+use Elasticsearch7\Connections\ConnectionFactoryInterface;
 
 class SniffingConnectionPool extends AbstractConnectionPool implements ConnectionPoolInterface
 {

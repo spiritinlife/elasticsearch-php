@@ -15,7 +15,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Elasticsearch7\Common\Exceptions;
 
 class AuthenticationConfigException extends \RuntimeException implements ElasticsearchException
 {

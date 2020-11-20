@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Nodes;
+namespace Elasticsearch7\Endpoints\Nodes;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 /**
  * Class ReloadSecureSettings
@@ -11,7 +11,7 @@ use Elasticsearch\Endpoints\AbstractEndpoint;
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Endpoints\Nodes
+ * @package  Elasticsearch7\Endpoints\Nodes
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co

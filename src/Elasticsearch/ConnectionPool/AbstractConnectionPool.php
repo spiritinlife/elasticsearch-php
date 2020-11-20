@@ -16,12 +16,12 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\ConnectionPool;
+namespace Elasticsearch7\ConnectionPool;
 
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\Connections\ConnectionFactoryInterface;
-use Elasticsearch\Connections\ConnectionInterface;
+use Elasticsearch7\Common\Exceptions\InvalidArgumentException;
+use Elasticsearch7\ConnectionPool\Selectors\SelectorInterface;
+use Elasticsearch7\Connections\ConnectionFactoryInterface;
+use Elasticsearch7\Connections\ConnectionInterface;
 
 abstract class AbstractConnectionPool implements ConnectionPoolInterface
 {
@@ -52,7 +52,7 @@ abstract class AbstractConnectionPool implements ConnectionPoolInterface
     protected $connectionPoolParams;
 
     /**
-     * @var \Elasticsearch\Connections\ConnectionFactory
+     * @var \Elasticsearch7\Connections\ConnectionFactory
      */
     protected $connectionFactory;
 

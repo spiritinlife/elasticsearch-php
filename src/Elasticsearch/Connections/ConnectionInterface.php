@@ -16,10 +16,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Connections;
+namespace Elasticsearch7\Connections;
 
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Elasticsearch7\Serializers\SerializerInterface;
+use Elasticsearch7\Transport;
 use Psr\Log\LoggerInterface;
 
 interface ConnectionInterface

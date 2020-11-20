@@ -15,9 +15,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Enrich;
+namespace Elasticsearch7\Endpoints\Enrich;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 /**
  * Class GetPolicy

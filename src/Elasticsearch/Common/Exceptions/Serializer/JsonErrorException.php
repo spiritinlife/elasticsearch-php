@@ -16,9 +16,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Common\Exceptions\Serializer;
+namespace Elasticsearch7\Common\Exceptions\Serializer;
 
-use Elasticsearch\Common\Exceptions\ElasticsearchException;
+use Elasticsearch7\Common\Exceptions\ElasticsearchException;
 
 class JsonErrorException extends \Exception implements ElasticsearchException
 {

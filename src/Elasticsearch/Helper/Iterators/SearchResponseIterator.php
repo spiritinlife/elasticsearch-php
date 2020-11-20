@@ -16,9 +16,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Helper\Iterators;
+namespace Elasticsearch7\Helper\Iterators;
 
-use Elasticsearch\Client;
+use Elasticsearch7\Client;
 use Iterator;
 
 class SearchResponseIterator implements Iterator

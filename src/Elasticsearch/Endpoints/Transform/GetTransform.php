@@ -15,9 +15,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints\Transform;
+namespace Elasticsearch7\Endpoints\Transform;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 /**
  * Class GetTransform

@@ -16,14 +16,14 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests\Endpoints;
+namespace Elasticsearch7\Tests\Endpoints;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
 
 class AbstractEndpointTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @var \Elasticsearch\Endpoints\AbstractEndpoint&\PHPUnit\Framework\MockObject\MockObject
+     * @var \Elasticsearch7\Endpoints\AbstractEndpoint&\PHPUnit\Framework\MockObject\MockObject
      */
     private $endpoint;
 
@@ -51,7 +51,7 @@ class AbstractEndpointTest extends \PHPUnit\Framework\TestCase
             ->method('getParamWhitelist')
             ->willReturn(['one', 'two']);
 
-        $this->expectException(\Elasticsearch\Common\Exceptions\UnexpectedValueException::class);
+        $this->expectException(\Elasticsearch7\Common\Exceptions\UnexpectedValueException::class);
 
         $this->endpoint->setParams($params);
     }

@@ -16,10 +16,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests\ConnectionPool;
+namespace Elasticsearch7\Tests\ConnectionPool;
 
 use Elasticsearch;
-use Elasticsearch\Tests\Utility;
+use Elasticsearch7\Tests\Utility;
 
 /**
  * Class StaticConnectionPoolIntegrationTest
@@ -48,9 +48,9 @@ class StaticConnectionPoolIntegrationTest extends \PHPUnit\Framework\TestCase
     // Issue #636
     public function test404Liveness()
     {
-        $client = \Elasticsearch\ClientBuilder::create()
+        $client = \Elasticsearch7\ClientBuilder::create()
             ->setHosts([$this->host])
-            ->setConnectionPool(\Elasticsearch\ConnectionPool\StaticConnectionPool::class)
+            ->setConnectionPool(\Elasticsearch7\ConnectionPool\StaticConnectionPool::class)
             ->build();
 
         $connection = $client->transport->getConnection();

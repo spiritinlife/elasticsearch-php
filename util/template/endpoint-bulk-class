@@ -14,10 +14,10 @@
  */
 declare(strict_types = 1);
 
-namespace Elasticsearch\Endpoints:namespace;
+namespace Elasticsearch7\Endpoints:namespace;
 :use-namespace
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Serializers\SerializerInterface;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Serializers\SerializerInterface;
 use Traversable;
 
 /**

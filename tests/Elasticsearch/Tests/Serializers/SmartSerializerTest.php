@@ -16,10 +16,10 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests\Serializers;
+namespace Elasticsearch7\Tests\Serializers;
 
-use Elasticsearch\Common\Exceptions\Serializer\JsonErrorException;
-use Elasticsearch\Serializers\SmartSerializer;
+use Elasticsearch7\Common\Exceptions\Serializer\JsonErrorException;
+use Elasticsearch7\Serializers\SmartSerializer;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 

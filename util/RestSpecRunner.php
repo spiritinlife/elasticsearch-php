@@ -16,8 +16,8 @@
 
 declare(strict_types = 1);
 
-use Elasticsearch\ClientBuilder;
-use Elasticsearch\Tests\Utility;
+use Elasticsearch7\ClientBuilder;
+use Elasticsearch7\Tests\Utility;
 use GitWrapper\GitWrapper;
 
 error_reporting(E_ALL | E_STRICT);
@@ -44,7 +44,7 @@ $serverInfo = $client->info();
 var_dump($serverInfo);
 
 $gitWrapper = new GitWrapper();
-echo "Git cwd: ".dirname(__DIR__) . "/util/elasticsearch\n";
+echo "Git cwd: ".dirname(__DIR__) . "/util/Elasticsearch7\n";
 $git = $gitWrapper->workingCopy(dirname(__DIR__) . '/util/elasticsearch');
 
 echo "Update elasticsearch submodule\n";

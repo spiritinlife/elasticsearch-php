@@ -46,7 +46,7 @@ method on the `ClientBuilder` object:
 [source,php]
 ----
 $client = ClientBuilder::create()
-            ->setSerializer('\Elasticsearch\Serializers\SmartSerializer');
+            ->setSerializer('\Elasticsearch7\Serializers\SmartSerializer');
             ->build();
 ----
 
@@ -84,7 +84,7 @@ the `ClientBuilder` object:
 [source,php]
 ----
 $client = ClientBuilder::create()
-            ->setSerializer('\Elasticsearch\Serializers\ArrayToJSONSerializer');
+            ->setSerializer('\Elasticsearch7\Serializers\ArrayToJSONSerializer');
             ->build();
 ----
 
@@ -118,7 +118,7 @@ method on the ClientBuilder object:
 [source,php]
 ----
 $client = ClientBuilder::create()
-            ->setSerializer('\Elasticsearch\Serializers\EverythingToJSONSerializer');
+            ->setSerializer('\Elasticsearch7\Serializers\EverythingToJSONSerializer');
             ->build();
 ----
 

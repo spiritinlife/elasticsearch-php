@@ -16,9 +16,9 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\ConnectionPool\Selectors;
+namespace Elasticsearch7\ConnectionPool\Selectors;
 
-use Elasticsearch\Connections\ConnectionInterface;
+use Elasticsearch7\Connections\ConnectionInterface;
 
 class StickyRoundRobinSelector implements SelectorInterface
 {

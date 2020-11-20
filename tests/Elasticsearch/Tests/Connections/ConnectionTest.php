@@ -16,14 +16,14 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests\Connections;
+namespace Elasticsearch7\Tests\Connections;
 
-use Elasticsearch\Client;
-use Elasticsearch\ClientBuilder;
-use Elasticsearch\Common\Exceptions\ServerErrorResponseException;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Serializers\SmartSerializer;
+use Elasticsearch7\Client;
+use Elasticsearch7\ClientBuilder;
+use Elasticsearch7\Common\Exceptions\ServerErrorResponseException;
+use Elasticsearch7\Connections\Connection;
+use Elasticsearch7\Serializers\SerializerInterface;
+use Elasticsearch7\Serializers\SmartSerializer;
 use Psr\Log\LoggerInterface;
 use ReflectionClass;
 
@@ -38,7 +38,7 @@ class ConnectionTest extends \PHPUnit\Framework\TestCase
      */
     private $trace;
     /**
-     * @var \Elasticsearch\Serializers\SerializerInterface&\PHPUnit\Framework\MockObject\MockObject
+     * @var \Elasticsearch7\Serializers\SerializerInterface&\PHPUnit\Framework\MockObject\MockObject
      */
     private $serializer;
 

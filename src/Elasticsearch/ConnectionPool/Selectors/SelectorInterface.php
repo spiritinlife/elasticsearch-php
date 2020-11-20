@@ -16,16 +16,16 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\ConnectionPool\Selectors;
+namespace Elasticsearch7\ConnectionPool\Selectors;
 
-use Elasticsearch\Connections\ConnectionInterface;
+use Elasticsearch7\Connections\ConnectionInterface;
 
 interface SelectorInterface
 {
     /**
      * Perform logic to select a single ConnectionInterface instance from the array provided
      *
-     * @param \Elasticsearch\Connections\ConnectionInterface[] $connections an array of ConnectionInterface instances to choose from
+     * @param \Elasticsearch7\Connections\ConnectionInterface[] $connections an array of ConnectionInterface instances to choose from
      */
     public function select(array $connections): ConnectionInterface;
 }

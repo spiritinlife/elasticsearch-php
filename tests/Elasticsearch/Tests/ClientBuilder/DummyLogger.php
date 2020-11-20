@@ -15,7 +15,7 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Tests\ClientBuilder;
+namespace Elasticsearch7\Tests\ClientBuilder;
 
 class DummyLogger
 {

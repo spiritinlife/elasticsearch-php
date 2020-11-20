@@ -16,15 +16,15 @@
 
 declare(strict_types = 1);
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch7\Namespaces;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
-use Elasticsearch\Transport;
+use Elasticsearch7\Endpoints\AbstractEndpoint;
+use Elasticsearch7\Transport;
 
 abstract class AbstractNamespace
 {
     /**
-     * @var \Elasticsearch\Transport
+     * @var \Elasticsearch7\Transport
      */
     protected $transport;
 

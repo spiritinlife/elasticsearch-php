@@ -1,16 +1,16 @@
 <?php
 declare(strict_types = 1);
 
-namespace Elasticsearch\Namespaces;
+namespace Elasticsearch7\Namespaces;
 
-use Elasticsearch\Namespaces\AbstractNamespace;
+use Elasticsearch7\Namespaces\AbstractNamespace;
 
 /**
  * Class ClusterNamespace
  * Generated running $ php util/GenerateEndpoints.php 7.6.1
  *
  * @category Elasticsearch
- * @package  Elasticsearch\Namespaces
+ * @package  Elasticsearch7\Namespaces
  * @author   Enrico Zimuel <enrico.zimuel@elastic.co>
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache2
  * @link     http://elastic.co
